@@ -36,8 +36,8 @@ $(function () {
 
     function init() {
         myMap = new ymaps.Map('map', {
-            center: [55.76, 37.64],
-            zoom: 10
+            center: [65.533142, 72.528935],
+            zoom: 12
         }, {
             searchControlProvider: 'yandex#search'
         });
@@ -60,4 +60,58 @@ $(function () {
     setInterval(dates, 30);
     dates();
 
+    const tempValC = document.getElementById('weather-temp-value-C')
+    const tempValF = document.getElementById('weather-temp-value-F')
+    const tempIcon = document.getElementById('weather-temp-img')
+    const coundIcon = document.getElementById('weather-cound-img')
+    const coundText = document.getElementById('weather-cound-text')
+    const windIcon = document.getElementById('weather-wind-img')
+    const windText = document.getElementById('weather-wind-text')
+    let tempResponse = fetch(`https://api.weatherapi.com/v1/current.json?key=d91aebb7dc8a467fbd9193631242706&q=65.533142,72.528935&aqi=yes`, {})
+        .then(tempResponse => tempResponse.json())
+        .then(tempResponse => {
+            tempValC.innerHTML = tempResponse.current.temp_c + "°C"
+            tempValF.innerHTML = tempResponse.current.temp_f + "°F"
+
+            if (tempResponse.current.temp_c >= 16) {
+                $(tempIcon).toggleClass('hot')
+            }
+
+            else if (tempResponse.current.temp_c <= 16) {
+                $(tempIcon).toggleClass('cold')
+            }
+        })
+
+    let coundResponse = fetch(`https://api.weatherapi.com/v1/marine.json?q=65.533142%2C72.528935&days=1&lang=ru&key=d91aebb7dc8a467fbd9193631242706`, {})
+        .then(coundResponse => coundResponse.json())
+        .then(coundResponse => {
+
+            const coundResponseText = coundResponse.forecast.forecastday[0].day.condition.text
+            coundText.innerHTML = coundResponseText
+
+            if (coundResponseText.toLowerCase().includes('снег')) {
+                $(coundIcon).toggleClass('snow')
+            }
+
+            else if (coundResponseText.toLowerCase().includes('солнечно') || coundResponseText.toLowerCase().includes('ясно')) {
+                $(coundIcon).toggleClass('sunny')
+            }
+
+            else if (coundResponseText.toLowerCase().includes('облачно') || coundResponseText.toLowerCase().includes('пасмурно')) {
+                $(coundIcon).toggleClass('cloud')
+            }
+
+            else if (coundResponseText.toLowerCase().includes('дожд') || coundResponseText.toLowerCase().includes('гроза')) {
+                $(coundIcon).toggleClass('rain')
+            }
+        })
+
+    let windResponse = fetch(`https://api.weatherapi.com/v1/current.json?key=d91aebb7dc8a467fbd9193631242706&q=65.533142,72.528935&aqi=yes`, {})
+        .then(windResponse => windResponse.json())
+        .then(windResponse => {
+            windText.innerHTML = (windResponse.current.wind_kph * 1000 / 3600).toFixed(2) + 'м/с'
+
+            console.log(windResponse)
+        }
+        )
 });
