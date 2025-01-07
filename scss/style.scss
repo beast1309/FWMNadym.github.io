@@ -124,6 +124,9 @@
 
     &__map-inner,
     &__table-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         position: absolute;
         left: 0;
         width: 100%;
@@ -142,6 +145,217 @@
     &__map-map {
         width: 100%;
         height: 400px;
+    }
+
+    &__table-table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__table-header {
+        display: grid;
+        grid-template-columns: 55px 209px 310px 1fr;
+        align-items: center;
+        gap: 10px;
+        text-transform: capitalize;
+
+        &__item {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #fff;
+            background-color: rgba(#0293D4, .8);
+
+            /* .table__select {
+                color: #fff;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                width: 100%;
+                text-align: center;
+
+                option {
+                    background-color: #0293D4;
+                    border: none;
+                }
+            } */
+        }
+
+        &__item.type {
+            position: relative;
+
+            .waters__table-header__type {
+                position: relative;
+                z-index: 5;
+            }
+
+            .waters__table-header__type::after {
+                content: '';
+                position: absolute;
+                display: flex;
+                margin: auto 0;
+                width: 10px;
+                height: 10px;
+                border-bottom: 3px solid #fff;
+                border-right: 3px solid #fff;
+                transform: rotate(45deg);
+                top: 0;
+                right: 50px;
+                bottom: 35px;
+            }
+
+            .waters__table-header__typeSort {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: transparent;
+                background-color: transparent;
+                border: none;
+                transition: ease .3s;
+            }
+
+            .waters__table-header__typeSort.--active {
+                color: inherit;
+            }
+
+            .waters__table-header__typeSort.--active:nth-child(2) {
+                margin-top: 10px;
+                transform: translateY(100%);
+                border: 3px solid #fff;
+                background-color: rgba(#0293D4, .8);
+            }
+
+            .waters__table-header__typeSort.--active:nth-child(3) {
+                margin-top: 15px;
+                transform: translateY(200%);
+                border: 3px solid #fff;
+                background-color: rgba(#0293D4, .8);
+            }
+
+            .waters__table-header__typeSort.--active:nth-child(4) {
+                margin-top: 20px;
+                transform: translateY(300%);
+                border: 3px solid #fff;
+                background-color: rgba(#0293D4, .8);
+            }
+        }
+
+        &__item.search {
+            position: relative;
+            padding: 0 38px;
+
+            .waters__table-header__search {
+                color: inherit;
+                background-color: transparent;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                outline: none;
+                border: none;
+                width: 100%;
+            }
+
+            .waters__table-header__search::placeholder {
+                color: inherit;
+            }
+        }
+
+        &__item.search::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('../images/table/search-icon.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 0;
+            right: 10px;
+            bottom: 0;
+            margin: auto 0;
+        }
+    }
+}
+
+.timesheet {
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        gap: 10px;
+
+        &-header {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 60px 1fr 1fr;
+            text-transform: capitalize;
+            gap: 10px;
+            padding-right: 14px;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#0293D4, .8);
+                border: 3px solid #fff;
+            }
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 280px;
+            overflow-y: scroll;
+            scrollbar-color: #0293D4 transparent;
+
+            &__row {
+                display: grid;
+                grid-template-columns: 60px 1fr 1fr;
+                gap: 10px;
+            }
+
+            &__cell {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#0293D4, .8);
+                border: 3px solid #fff;
+                padding: 5px;
+            }
+
+            &__cell:nth-child(1),
+            &__cell:nth-child(3) {
+                justify-content: center;
+            }
+        }
     }
 }
 

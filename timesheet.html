@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper" style="background-image: url('./images/bg.png');">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <button class="header__burger" id="menu-open">
+                        <img class="header__burger-img" src="images/menu-btn.svg" alt="">
+                    </button>
+                    <a class="header__logo" href="index.html">
+                        <img class="header__logo-img" src="images/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="leftside__menu --hidden">
+                <button class="leftside__menu-close" id="menu-close">
+                    <img class="leftside__menu-close__img" src="images/close-btn.png" alt="">
+                </button>
+                <nav class="leftside__menu-nav">
+                    <a class="leftside__menu-nav__link" href="index.html">ГЛАВНАЯ</a>
+                    <a class="leftside__menu-nav__link" href="#">КАЛЬКУЛЯТОР ГДЗС</a>
+                    <a class="leftside__menu-nav__link" href="#">БАЗА ЗНАНИЙ</a>
+                    <a class="leftside__menu-nav__link --active" href="timesheet.html">РАСПИСАНИЕ</a>
+                </nav>
+            </div>
+            <section class="timesheet">
+                <div class="container">
+                    <div class="timesheet__inner">
+                        <h2 class="timesheet__title">ВНУТРЕННИЙ РАСПОРЯДОК</h2>
+                        <div class="timesheet__table">
+                            <div class="timesheet__table-header">
+                                <div class="timesheet__table-header__item">№п/п</div>
+                                <div class="timesheet__table-header__item">наименование мероприятий</div>
+                                <div class="timesheet__table-header__item">время проведения</div>
+                            </div>
+                            <div class="timesheet__table-body">
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">1.</div>
+                                    <div class="timesheet__table-body__cell">Смена караулов(держурных смен)</div>
+                                    <div class="timesheet__table-body__cell">08:00 - 08:30</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">2.</div>
+                                    <div class="timesheet__table-body__cell">Подготовка к занятиям</div>
+                                    <div class="timesheet__table-body__cell">08:30 - 09:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">3.</div>
+                                    <div class="timesheet__table-body__cell">Занятия согласно расписанию:<br>первый
+                                        учебный час<br>второй учебный час<br>третий учебный час<br>четвертый учебный час
+                                        (отработка нормативов по ПСП, ГДЗС)</div>
+                                    <div class="timesheet__table-body__cell">09:00 - 09:45<br>09:50 - 10:35<br>10:45 -
+                                        11:30<br>11:40 - 12:25</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">4.</div>
+                                    <div class="timesheet__table-body__cell">Время приема пищи</div>
+                                    <div class="timesheet__table-body__cell">12:30 - 13:30</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">5.</div>
+                                    <div class="timesheet__table-body__cell">Время психологической разгрузки</div>
+                                    <div class="timesheet__table-body__cell">13:30 - 14:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">6.</div>
+                                    <div class="timesheet__table-body__cell">Пятый учебный час. Оперативно-тактическое
+                                        изучение района выезда подразделения и охраняемых объектов. Отработка планов и
+                                        карточек тушения пожаров</div>
+                                    <div class="timesheet__table-body__cell">14:00 - 15:30</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">7.</div>
+                                    <div class="timesheet__table-body__cell">Обслуживание пожарной
+                                        (аварийно-спасательной) техники, пожарно-технического вооружения,
+                                        аварийно-спасательного оборудования. Административно-хозяйственные мероприятия
+                                        по улучшению условий службы, режимов труда и отдыха личного состава</div>
+                                    <div class="timesheet__table-body__cell">15:30 - 18:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">8.</div>
+                                    <div class="timesheet__table-body__cell">Шестой учебный час. Физическая подготовка
+                                    </div>
+                                    <div class="timesheet__table-body__cell">18:00 - 19:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">9.</div>
+                                    <div class="timesheet__table-body__cell">Время приема пищи</div>
+                                    <div class="timesheet__table-body__cell">19:00 - 20:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">10.</div>
+                                    <div class="timesheet__table-body__cell">Самостоятельная подготовка, выполнение
+                                        индивидуальных заданий, изучение нормативных документов</div>
+                                    <div class="timesheet__table-body__cell">20:00 - 21:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">11.</div>
+                                    <div class="timesheet__table-body__cell">Культурно-досуговая работа, информирование
+                                        личного состава, прослушивание радио и просмотр телепрограмм, личное время</div>
+                                    <div class="timesheet__table-body__cell">21:00 - 21:30</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">12.</div>
+                                    <div class="timesheet__table-body__cell">Вечерний туалет</div>
+                                    <div class="timesheet__table-body__cell">21:30 - 22:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">13.</div>
+                                    <div class="timesheet__table-body__cell">Несение караульной службы в ночное время,
+                                        охрана помещений и территории подразделения</div>
+                                    <div class="timesheet__table-body__cell">22:00 - 06:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">14.</div>
+                                    <div class="timesheet__table-body__cell">Завершение несения караульной службы в
+                                        ночное время</div>
+                                    <div class="timesheet__table-body__cell">06:00</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">15.</div>
+                                    <div class="timesheet__table-body__cell">Утренний туалет, физическая зарядка</div>
+                                    <div class="timesheet__table-body__cell">06:00 - 06:30</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">16.</div>
+                                    <div class="timesheet__table-body__cell">Время приема пищи</div>
+                                    <div class="timesheet__table-body__cell">06:30 - 07:15</div>
+                                </div>
+                                <div class="timesheet__table-body__row">
+                                    <div class="timesheet__table-body__cell">17.</div>
+                                    <div class="timesheet__table-body__cell">Подготовка к смене караулов (дежурных смен)
+                                    </div>
+                                    <div class="timesheet__table-body__cell">07:15 - 08:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="vigets__inner">
+                    <div class="vigets__time">
+                        <h2 class="vigets__time-title">МЕСТНОЕ ВРЕМЯ:</h2>
+                        <div class="vigets__time-time" id="time-viget"></div>
+                    </div>
+                    <div class="vigets__weather">
+                        <h2 class="vigets__weather-title">ПОГОДНЫЕ УСЛОВИЯ:</h2>
+                        <div class="vigets__weather-inner">
+                            <div class="vigets__weather-temp">
+                                <div class="vigets__weather-temp__img" id="weather-temp-img"></div>
+                                <div class="vigets__weather-temp__value" id="weather-temp-value-C"></div>
+                                <div class="vigets__weather-temp__value" id="weather-temp-value-F"></div>
+                            </div>
+                            <div class="vigets__weather-info">
+                                <div class="vigets__weather-info__cound">
+                                    <div class="vigets__weather-info__img" id="weather-cound-img"></div>
+                                    <div class="vigets__weather-info__text" id="weather-cound-text"></div>
+                                </div>
+                                <div class="vigets__weather-info__wind">
+                                    <div class="vigets__weather-info__img" id="weather-wind-img"></div>
+                                    <div class="vigets__weather-info__text" id="weather-wind-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="mapbasics.js" type="text/javascript"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

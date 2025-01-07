@@ -30,6 +30,10 @@ $(function () {
         $('.waters__map-inner').toggleClass('--hidden')
     })
 
+    $('#type').on('click', function () {
+        $(document.querySelectorAll('#typeSort')).toggleClass('--active')
+    })
+
     let myMap;
 
     ymaps.ready(init);
@@ -110,8 +114,7 @@ $(function () {
         .then(windResponse => windResponse.json())
         .then(windResponse => {
             windText.innerHTML = (windResponse.current.wind_kph * 1000 / 3600).toFixed(2) + 'м/с'
+        })
 
-            console.log(windResponse)
-        }
-        )
+
 });

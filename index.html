@@ -45,10 +45,10 @@
                     <img class="leftside__menu-close__img" src="images/close-btn.png" alt="">
                 </button>
                 <nav class="leftside__menu-nav">
-                    <a class="leftside__menu-nav__link --active" href="#">ГЛАВНАЯ</a>
+                    <a class="leftside__menu-nav__link --active" href="index.html">ГЛАВНАЯ</a>
                     <a class="leftside__menu-nav__link" href="#">КАЛЬКУЛЯТОР ГДЗС</a>
                     <a class="leftside__menu-nav__link" href="#">БАЗА ЗНАНИЙ</a>
-                    <a class="leftside__menu-nav__link" href="#">РАСПИСАНИЕ</a>
+                    <a class="leftside__menu-nav__link" href="timesheet.html">РАСПИСАНИЕ</a>
                 </nav>
             </div>
             <section class="waters">
@@ -60,7 +60,37 @@
                         </div>
                         <div class="waters__table-inner --hidden">
                             <h2 class="waters__table-title">ПЛАНШЕТ ВОДОИСТОЧНИКОВ</h2>
-                            <div class="waters__table-table"></div>
+                            <div class="waters__table-table">
+                                <div class="waters__table-header">
+                                    <div class="waters__table-header__item">№ п/п</div>
+                                    <div class="waters__table-header__item type">
+                                        <button class="waters__table-header__type" id="type">Тип водоисточника</button>
+                                        <button class="waters__table-header__typeSort" id="typeSort"
+                                            value="0">Все</button>
+                                        <button class="waters__table-header__typeSort" id="typeSort"
+                                            value="1">Гидранты</button>
+                                        <button class="waters__table-header__typeSort" id="typeSort"
+                                            value="2">Водоёмы</button>
+                                        <!-- <select class="table__select" name="" id="">
+                                            <option class="table__select-value" value="0">Все водоисточники</option>
+                                            <option class="table__select-value" value="1">Гидранты</option>
+                                            <option class="table__select-value" value="2">Водоёмы</option>
+                                        </select> -->
+                                    </div>
+                                    <div class="waters__table-header__item search">
+                                        <input class="waters__table-header__search" type="text"
+                                            placeholder="Местонахождение">
+                                    </div>
+                                    <div class="waters__table-header__item info">
+                                        Справка
+                                    </div>
+                                </div>
+                                <div class="waters__table-body">
+                                    <div class="waters__table-body__row">
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
