@@ -1,1 +1,102 @@
-@media (max-width: 1440px) {}
+@media (max-width: 933px) {
+    .header {
+        margin-bottom: 10px;
+
+        &__inner {
+            height: 80px;
+        }
+
+        &__logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        &__burger {
+            width: 40px;
+            height: 15px;
+        }
+
+        &__nav {
+            button {
+                font-size: 20px !important;
+            }
+        }
+
+        .header__nav.--map::after {
+            width: 64px;
+            height: 2px;
+        }
+
+        .header__nav.--table::after {
+            width: 100px;
+            height: 2px;
+            transform: translateX(124%);
+        }
+    }
+
+    .leftside__menu {
+        gap: 20px;
+
+        &-close {
+            width: 25px;
+            height: 25px;
+        }
+
+        &-nav {
+            gap: 40px;
+
+            &__link {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .footer {
+        font-size: 16px;
+        padding: 0px 0 10px;
+    }
+
+    .ymaps-2-1-79-map {
+        width: 420px !important;
+        height: 240px !important;
+    }
+
+    .waters__map-inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .waters__map-map {
+        width: 420px;
+        height: 240px;
+    }
+
+    .waters__table-table {
+        font-size: 14px;
+    }
+
+    .timesheet__table-header {
+        padding-right: 0;
+    }
+
+    .timesheet__table-body {
+        max-height: 160px;
+    }
+
+    .calc__calc-inner {
+        max-height: 240px;
+        overflow-y: scroll;
+        scrollbar-color: #0293D4 transparent;
+    }
+
+    .header__nav.--calc::after {
+        width: 148px;
+        height: 2px;
+    }
+
+    .header__nav.--formul::after {
+        width: 110px;
+        height: 2px;
+        transform: translateX(186%);
+    }
+}
