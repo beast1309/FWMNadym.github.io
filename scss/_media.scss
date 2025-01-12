@@ -214,6 +214,15 @@
         transform: translateX(87%);
     }
 
+    .header__nav.--calc::after {
+        width: 116px;
+    }
+
+    .header__nav.--formul::after {
+        width: 86px;
+        transform: translateX(161%);
+    }
+
     .waters__table-table {
         font-size: 10px;
         font-weight: 400;
@@ -278,5 +287,27 @@
         &__text {
             margin: 0 0 0 auto;
         }
+    }
+
+    .calc__calc-inner {
+        max-height: 590px;
+    }
+
+    .calc__calc-table {
+        font-weight: 400;
+    }
+
+    .time__on {
+        p {
+            font-size: 12px !important;
+        }
+    }
+
+    .timesheet__table {
+        font-size: 12px;
+    }
+
+    .timesheet__table-body {
+        max-height: 500px;
     }
 }
