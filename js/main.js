@@ -183,7 +183,28 @@ $(function () {
     let windResponse = fetch(`https://api.weatherapi.com/v1/current.json?key=d91aebb7dc8a467fbd9193631242706&q=65.533142,72.528935&aqi=yes`, {})
         .then(windResponse => windResponse.json())
         .then(windResponse => {
-            windText.innerHTML = (windResponse.current.wind_kph * 1000 / 3600).toFixed(2) + 'м/с'
+            let windDir = windResponse.current.wind_dir
+            switch (windDir) {
+                case 'N': windDir = 'С'
+                    break
+                case 'S': windDir = 'Ю'
+                    break
+                case 'W': windDir = 'З'
+                    break
+                case 'E': windDir = 'В'
+                    break
+                case 'WNW': windDir = 'ЗСЗ'
+                    break
+                case 'WSW': windDir = 'ЗЮЗ'
+                    break
+                case 'EWE': windDir = 'ВСВ'
+                    break
+                case 'ESE': windDir = 'ВЮВ'
+                    break
+                default: windDir = ''
+                    break
+            }
+            windText.innerHTML = (windResponse.current.wind_kph * 1000 / 3600).toFixed(2) + 'м/с' + ' ' + windDir
         })
 
     $('.calculator__btn').on('click', function calc() {
