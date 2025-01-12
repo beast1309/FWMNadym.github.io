@@ -97,8 +97,6 @@
     }
 }
 
-
-
 @media (max-width: 741px) {
     h2 {
         font-size: 18px;
@@ -172,5 +170,113 @@
 
     .timesheet__table-body {
         max-height: 120px;
+    }
+}
+
+@media (max-width: 431px) {
+
+    h2,
+    p,
+    a {
+        font-size: 16px !important;
+    }
+
+    .leftside__menu-nav {
+        gap: 120px;
+
+        &__link {
+            font-size: 24px !important;
+        }
+    }
+
+    .waters__map-inner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .waters__map-map,
+    .ymaps-2-1-79-map {
+        width: 360px !important;
+        height: 540px !important;
+    }
+
+    .header__nav {
+        gap: 20px;
+    }
+
+    .header .header__nav.--map::after {
+        width: 50px;
+    }
+
+    .header .header__nav.--table::after {
+        width: 81px;
+        transform: translateX(87%);
+    }
+
+    .waters__table-table {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .waters__table-header,
+    .calc__table-header,
+    .waters__table-body__row,
+    .calc__table-body__row {
+        grid-template-columns: 28px 90px 100px 1fr;
+    }
+
+    .waters__table-header__item.search,
+    .calc__table-header__item.search {
+        padding: 0 8px;
+    }
+
+    .waters__table-header,
+    .calc__table-header,
+    .waters__table-body__row,
+    .calc__table-body__row {
+        gap: 4px;
+    }
+
+    .vigets__inner {
+        gap: 10px;
+    }
+
+    .vigets__time {
+        text-align: center;
+
+        &-time {
+            margin: auto 0;
+        }
+    }
+
+    .vigets__weather {
+        gap: 10px;
+    }
+
+    .vigets__weather-inner {
+        flex-direction: column;
+        text-align: right;
+        align-items: start;
+        gap: 10px !important;
+    }
+
+    .vigets__weather-temp {
+        width: 100%;
+        justify-items: start !important;
+
+        &__value {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .vigets__weather-info {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        &__text {
+            margin: 0 0 0 auto;
+        }
     }
 }
