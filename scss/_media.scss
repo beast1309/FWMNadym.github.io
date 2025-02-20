@@ -294,7 +294,17 @@
     }
 
     .calc__calc-table {
-        font-weight: 400;
+        font-size: 11px;
+    }
+
+    .calc__calc-table,
+    th {
+        font-weight: 400 !important;
+    }
+
+    .calc__calc-table,
+    td {
+        border: 1px solid #fff !important;
     }
 
     .time__on {
@@ -309,5 +319,101 @@
 
     .timesheet__table-body {
         max-height: 500px;
+    }
+}
+
+@media (max-width: 391px) {
+
+    h2,
+    p,
+    a {
+        font-size: 12px !important;
+    }
+
+    .leftside__menu {
+        width: 280px;
+        padding: 30px 30px 55px;
+    }
+
+    .leftside__menu-nav__link {
+        font-size: 20px !important;
+    }
+
+    .waters__map-map,
+    .ymaps-2-1-79-map {
+        width: 300px !important;
+        height: 480px !important;
+    }
+
+    .calc__calc-table .time__on {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .calc__calc-inner {
+        max-height: 480px;
+    }
+
+    .header__nav.--calc::after {
+        width: 87px;
+    }
+
+    .header__nav.--formul::after {
+        width: 64px;
+        transform: translateX(170%);
+    }
+
+    .timesheet__table {
+        font-size: 10px;
+    }
+
+    .timesheet__table-header,
+    .timesheet__table-body,
+    .timesheet__table-body__row {
+        gap: 5px;
+    }
+
+    .timesheet__table-body {
+        max-height: 480px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 376px) {
+
+    .timesheet__table-body {
+        max-height: 290px;
+    }
+
+    .waters__map-map,
+    .ymaps-2-1-79-map {
+        height: 340px !important;
+    }
+
+    .header .header__nav.--map::after {
+        width: 38px;
+    }
+
+    .header .header__nav.--table::after {
+        width: 61px;
+        transform: translateX(94%);
+    }
+
+    .calc__calc-inner {
+        max-height: 380px;
+    }
+}
+
+@media (max-width: 361px) {
+
+    .waters__map-map,
+    .ymaps-2-1-79-map {
+        width: 240px !important;
+        height: 280px !important;
+    }
+
+    .leftside__menu-nav {
+        gap: 80px;
     }
 }

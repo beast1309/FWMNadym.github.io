@@ -1,5 +1,30 @@
 $(function () {
 
+    if (window.location.pathname == '/RTPCalc.html') {
+        const TsrBtn = document.getElementById('TsrBtn')
+        TsrBtn.addEventListener('click', function () {
+            const TsrTmess = document.getElementById('TsrTmess').value
+            const TsrTbr = document.getElementById('TsrTbr').value
+            const TsrTsld = document.getElementById('TsrTsld').value
+
+            answer = parseInt(TsrTmess) + parseInt(TsrTbr) + parseInt(TsrTsld) + 1
+            if (TsrTsld !== '' && TsrTsld !== null) {
+                document.getElementById('TsrAnswer').innerText = parseInt(answer)
+            }
+        })
+
+        const TslBtn = document.getElementById('TslBtn')
+        TslBtn.addEventListener('click', function () {
+            const TslL = document.getElementById('L').value
+            const TslVsr = document.getElementById('Vsr').value
+
+            answer = parseInt(TslL) * 60 / parseInt(TslVsr)
+            if (TslL !== '' && TslL !== null && TslVsr !== '' && TslVsr !== null) {
+                document.getElementById('TslAnswer').innerText = parseInt(answer)
+            }
+        })
+    }
+
     $('#menu-open').on('click', function () {
         $('.leftside__menu').removeClass('--hidden')
     })
@@ -201,10 +226,13 @@ $(function () {
                     break
                 case 'ESE': windDir = 'ВЮВ'
                     break
+                case 'SSW': windDir = 'ЮЮЗ'
+                    break
                 default: windDir = ''
                     break
             }
             windText.innerHTML = (windResponse.current.wind_kph * 1000 / 3600).toFixed(2) + 'м/с' + ' ' + windDir
+            console.log(windResponse)
         })
 
     $('.calculator__btn').on('click', function calc() {

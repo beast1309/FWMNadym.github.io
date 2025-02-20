@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper" style="background-image: url('./images/bg.png');">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <button class="header__burger" id="menu-open">
+                        <img class="header__burger-img" src="images/menu-btn.svg" alt="">
+                    </button>
+                    <a class="header__logo" href="index.html">
+                        <img class="header__logo-img" src="images/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="leftside__menu --hidden">
+                <button class="leftside__menu-close" id="menu-close">
+                    <img class="leftside__menu-close__img" src="images/close-btn.png" alt="">
+                </button>
+                <nav class="leftside__menu-nav">
+                    <a class="leftside__menu-nav__link" href="index.html">ГЛАВНАЯ</a>
+                    <a class="leftside__menu-nav__link" href="calc.html">КАЛЬКУЛЯТОР ГДЗС</a>
+                    <a class="leftside__menu-nav__link --active" href="RTPCalc.html">РАСЧЁТЫ РТП</a>
+                    <a class="leftside__menu-nav__link" href="#">БАЗА ЗНАНИЙ</a>
+                    <a class="leftside__menu-nav__link" href="timesheet.html">РАСПИСАНИЕ</a>
+                </nav>
+            </div>
+            <section class="RTPCalc">
+                <div class="container">
+                    <div class="RTPCalc__inner">
+                        <h2 class="RTPCalc__title">РАСЧЁТЫ РТП</h2>
+                        <div class="RTPCalc__table">
+                            <div class="RTPCalc__table-item Tsr">
+                                <h4 class="RTPCalc__table-item__title Tsr">Время свободного развития пожара(мин)</h4>
+                                <div class="RTPCalc__table-item__answer Tsr" id="TsrAnswer"></div>
+                                <select class="RTPCalc__table-item__select Tsr" id="TsrTmess">
+                                    <option class="RTPCalc__table-item__option Tsr" value="5">5</option>
+                                    <option class="RTPCalc__table-item__option Tsr" value="10">10</option>
+                                </select>
+                                <select class="RTPCalc__table-item__select Tsr" id="TsrTbr">
+                                    <option class="RTPCalc__table-item__option Tsr" value="3">3</option>
+                                    <option class="RTPCalc__table-item__option Tsr" value="6">6</option>
+                                </select>
+                                <input class="RTPCalc__table-item__input Tsr" type="number" id="TsrTsld"
+                                    placeholder="ВРЕМЯ СЛЕДОВАНИЯ">
+                                <button class="RTPCalc__table-item__button Tsr btn" id="TsrBtn">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img Tsr" src="images/rtpcalc/tsr.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item Tsl">
+                                <h4 class="RTPCalc__table-item__title Tsl">Время следования</h4>
+                                <div class="RTPCalc__table-item__answer Tsl" id="TslAnswer"></div>
+                                <input class="RTPCalc__table-item__input Tsl" type="number" id="L"
+                                    placeholder="РАССТОЯНИЕ">
+                                <input class="RTPCalc__table-item__input Tsl" type="number" id="Vsr"
+                                    placeholder="СРЕДНЯЯ СКОРОСТЬ ПА">
+                                <button class="RTPCalc__table-item__button Tsl btn" id="TslBtn">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img Tsl" src="images/rtpcalc/tsl.png" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="vigets__inner">
+                    <div class="vigets__time">
+                        <h2 class="vigets__time-title">МЕСТНОЕ ВРЕМЯ:</h2>
+                        <div class="vigets__time-time" id="time-viget"></div>
+                    </div>
+                    <div class="vigets__weather">
+                        <h2 class="vigets__weather-title">ПОГОДНЫЕ УСЛОВИЯ:</h2>
+                        <div class="vigets__weather-inner">
+                            <div class="vigets__weather-temp">
+                                <div class="vigets__weather-temp__img" id="weather-temp-img"></div>
+                                <div class="vigets__weather-temp__value" id="weather-temp-value-C"></div>
+                                <div class="vigets__weather-temp__value" id="weather-temp-value-F"></div>
+                            </div>
+                            <div class="vigets__weather-info">
+                                <div class="vigets__weather-info__cound">
+                                    <div class="vigets__weather-info__img" id="weather-cound-img"></div>
+                                    <div class="vigets__weather-info__text" id="weather-cound-text"></div>
+                                </div>
+                                <div class="vigets__weather-info__wind">
+                                    <div class="vigets__weather-info__img" id="weather-wind-img"></div>
+                                    <div class="vigets__weather-info__text" id="weather-wind-text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="mapbasics.js" type="text/javascript"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
