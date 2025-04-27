@@ -473,7 +473,7 @@
     &__table {
         display: flex;
         flex-direction: column;
-        max-height: 580px;
+        max-height: 380px;
         overflow-y: scroll;
         scrollbar-color: #0293D4 transparent;
         gap: 60px;
@@ -488,7 +488,9 @@
             &__img,
             &__input,
             &__select,
-            &__button {
+            &__button,
+            &__leg,
+            &__span {
                 color: #fff;
                 border: 2px solid #0293D4;
                 background: rgba(#0293D4, .8);
@@ -500,10 +502,55 @@
                 grid-column: span 5;
             }
 
+            &__answer {
+                grid-row: 2;
+                grid-column: span 5;
+                height: 38px;
+            }
+
+            &__button {
+                grid-row: 4;
+                grid-column: span 5;
+            }
+
             &__input::placeholder {
                 color: #fff;
             }
+
+            &__leg {
+                grid-row: 4;
+                grid-column: span 5;
+            }
+
+            &__span {
+                grid-row: 6;
+            }
+
+            &__checkbox {
+                padding: 0;
+                margin: 0 auto;
+                width: 30px;
+                height: 30px;
+            }
         }
+    }
+
+    #TAStNWQ,
+    #TAStNWN2,
+    #TAStWQ,
+    #TAStWN2 {
+        grid-column: span 2;
+        grid-row: 3;
+    }
+
+    #TAStNWV1,
+    #TAStWV1 {
+        grid-row: 3;
+    }
+
+    #TAStNW,
+    #TAStW {
+        grid-row: 5;
     }
 }
 

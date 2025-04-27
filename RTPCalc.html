@@ -77,6 +77,324 @@
                                 <img class="RTPCalc__table-item__img Tsl" src="images/rtpcalc/tsl.png" alt="">
                             </div>
 
+                            <div class="RTPCalc__table-item Lpoj">
+                                <h4 class="RTPCalc__table-item__title Lpoj">Длина пути, пройденная огнём (до 10 мин)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer Lpoj" id="LpojAnswer"></div>
+                                <input class="RTPCalc__table-item__input Lpoj" type="number" id="LpojV"
+                                    placeholder="ЛИНЕЙНАЯ СКОРОСТЬ РАСПРОСТРАНЕНИЯ ГОРЕНИЯ">
+                                <input class="RTPCalc__table-item__input Lpoj" type="number" id="LpojT"
+                                    placeholder="ВРЕМЯ СВОБОДНОГО РАЗВИТИЯ ПОЖАРА">
+                                <button class="RTPCalc__table-item__button Lpoj btn" id="LpojBtn">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img Tpoj" src="images/rtpcalc/lpoj-do10.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item Lpoj-10">
+                                <h4 class="RTPCalc__table-item__title Lpoj-10">Длина пути, пройденная огнём (больше 10
+                                    мин)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer Lpoj-10" id="LpojAnswer-10"></div>
+                                <input class="RTPCalc__table-item__input Lpoj-10" type="number" id="LpojV-10"
+                                    placeholder="ЛИНЕЙНАЯ СКОРОСТЬ РАСПРОСТРАНЕНИЯ ГОРЕНИЯ">
+                                <input class="RTPCalc__table-item__input Lpoj-10" type="number" id="LpojT-10"
+                                    placeholder="ВРЕМЯ СВОБОДНОГО РАЗВИТИЯ ПОЖАРА">
+                                <button class="RTPCalc__table-item__button Lpoj-10 btn"
+                                    id="LpojBtn-10">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img Tpoj-10" src="images/rtpcalc/lpoj-ot10.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SRad">
+                                <h4 class="RTPCalc__table-item__title SRad">Площадь пожара (круговая)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SRad" id="SRadAnswer"></div>
+                                <input class="RTPCalc__table-item__input SRad" type="number" id="SRad-Lput"
+                                    placeholder="РАДИУС ПОЖАРА">
+                                <button class="RTPCalc__table-item__button SRad btn" id="SRad">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SRad" src="images/rtpcalc/SRad.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SAng">
+                                <h4 class="RTPCalc__table-item__title SAng">Площадь пожара (угловая)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SAng" id="SAngAnswer"></div>
+                                <input class="RTPCalc__table-item__input SAng" type="number" id="SAng-Lput"
+                                    placeholder="РАДИУС ПОЖАРА">
+                                <input class="RTPCalc__table-item__input SAng" type="number" id="SAng-ang"
+                                    placeholder="УГОЛ РАЗВИТИЯ ПОЖАРА">
+                                <button class="RTPCalc__table-item__button SAng btn" id="SAng">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SAng" src="images/rtpcalc/SAng.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SRec">
+                                <h4 class="RTPCalc__table-item__title SRec">Площадь пожара (прямоугольная)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SRec" id="SRecAnswer"></div>
+                                <input class="RTPCalc__table-item__input SRec" type="number" id="SRec-A"
+                                    placeholder="ФРОНТ ГОРЕНИЯ А">
+                                <input class="RTPCalc__table-item__input SRec" type="number" id="SRec-B"
+                                    placeholder="ФРОНТ ГОРЕНИЯ Б">
+                                <button class="RTPCalc__table-item__button SRec btn" id="SRec">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SRec" src="images/rtpcalc/SRec.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SRecDB">
+                                <h4 class="RTPCalc__table-item__title SRecDB">Площадь пожара (прямоугольная)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SRecDB" id="SRecDBAnswer"></div>
+                                <input class="RTPCalc__table-item__input SRecDB" type="number" id="SRecDB-A"
+                                    placeholder="ФРОНТ ГОРЕНИЯ А">
+                                <input class="RTPCalc__table-item__input SRecDB" type="number" id="SRecDB-B1"
+                                    placeholder="ФРОНТ ГОРЕНИЯ Б1">
+                                <input class="RTPCalc__table-item__input SRecDB" type="number" id="SRecDB-B2"
+                                    placeholder="ФРОНТ ГОРЕНИЯ Б2">
+                                <button class="RTPCalc__table-item__button SRecDB btn" id="SRecDB">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SRecDB" src="images/rtpcalc/SRecDB.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item PCir">
+                                <h4 class="RTPCalc__table-item__title PCir">Периметр пожара (круговой)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer PCir" id="PCirAnswer"></div>
+                                <input class="RTPCalc__table-item__input PCir" type="number" id="PCirR"
+                                    placeholder="ДЛИНА ПУТИ(РАДИУС)">
+                                <button class="RTPCalc__table-item__button PCir btn" id="PCir">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img PCir" src="images/rtpcalc/PCir.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item PAng">
+                                <h4 class="RTPCalc__table-item__title PAng">Периметр пожара (угловой)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer PAng" id="PAngAnswer"></div>
+                                <input class="RTPCalc__table-item__input PAng" type="number" id="PAng-ang"
+                                    placeholder="УГОЛ РАЗВИТИЯ ПОЖАРА">
+                                <input class="RTPCalc__table-item__input PAng" type="number" id="PAngR"
+                                    placeholder="ДЛИНА ПУТИ(РАДИУС)">
+                                <button class="RTPCalc__table-item__button PAng btn" id="PAng">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img PAng" src="images/rtpcalc/PAng.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item PRect">
+                                <h4 class="RTPCalc__table-item__title PRect">Периметр пожара (прямоугольный)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer PRect" id="PRectAnswer"></div>
+                                <input class="RTPCalc__table-item__input PRect" type="number" id="PRect-a"
+                                    placeholder="ФРОНТ ГОРЕНИЯ А">
+                                <input class="RTPCalc__table-item__input PRect" type="number" id="PRect-b"
+                                    placeholder="ФРОНТ ГОРЕНИЯ Б">
+                                <button class="RTPCalc__table-item__button PRect btn" id="PRect">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img PRect" src="images/rtpcalc/PRect.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item PRectDB">
+                                <h4 class="RTPCalc__table-item__title PRectDB">Периметр пожара (прямоугольный в 2-х
+                                    направления)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer PRectDB" id="PRectDBAnswer"></div>
+                                <input class="RTPCalc__table-item__input PRectDB" type="number" id="PRectDB-a"
+                                    placeholder="ФРОНТ ГОРЕНИЯ А">
+                                <input class="RTPCalc__table-item__input PRectDB" type="number" id="PRectDB-b1"
+                                    placeholder="ФРОНТ ГОРЕНИЯ Б1">
+                                <input class="RTPCalc__table-item__input PRectDB" type="number" id="PRectDB-b2"
+                                    placeholder="ФРОНТ ГОРЕНИЯ Б2">
+                                <button class="RTPCalc__table-item__button PRectDB btn" id="PRectDB">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img PRectDB" src="images/rtpcalc/PRectDB.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SExtCir">
+                                <h4 class="RTPCalc__table-item__title SExtCir">Площадь тушения (круговая)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SExtCir" id="SExtCirAnswer"></div>
+                                <input class="RTPCalc__table-item__input SExtCir" type="number" id="SExtCirR"
+                                    placeholder="ДЛИНА ПУТИ(РАДИУС ПОЖАРА)">
+                                <input class="RTPCalc__table-item__input SExtCir" type="number" id="SExtCirDp"
+                                    placeholder="ГЛУБИНА ТУШЕНИЯ СТВОЛА">
+                                <button class="RTPCalc__table-item__button SExtCir btn" id="SExtCir">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SExtCir" src="images/rtpcalc/SExtCir.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SExtAng">
+                                <h4 class="RTPCalc__table-item__title SExtAng">Площадь тушения (угловая)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SExtAng" id="SExtAngAnswer"></div>
+                                <input class="RTPCalc__table-item__input SExtAng" type="number" id="SExtAngR"
+                                    placeholder="ДЛИНА ПУТИ(РАДИУС ПОЖАРА)">
+                                <input class="RTPCalc__table-item__input SExtAng" type="number" id="SExtAngDp"
+                                    placeholder="ГЛУБИНА ТУШЕНИЯ СТВОЛА">
+                                <input class="RTPCalc__table-item__input SExtAng" type="number" id="SExtAngAng"
+                                    placeholder="УГОЛ РАЗВИТИЯ ПОЖАРА">
+                                <button class="RTPCalc__table-item__button SExtAng btn" id="SExtAng">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SExtAng" src="images/rtpcalc/SExtAng.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SExtRect">
+                                <h4 class="RTPCalc__table-item__title SExtRect">Площадь тушения (прямоугольная)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SExtRect" id="SExtRectAnswer"></div>
+                                <input class="RTPCalc__table-item__input SExtRect" type="number" id="SExtRectA"
+                                    placeholder="ШИРИНА ФРОНТА ТУШЕНИЯ">
+                                <input class="RTPCalc__table-item__input SExtRect" type="number" id="SExtRectDp"
+                                    placeholder="ГЛУБИНА ТУШЕНИЯ СТВОЛА">
+                                <button class="RTPCalc__table-item__button SExtRect btn"
+                                    id="SExtRect">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SExtRect" src="images/rtpcalc/SExtRect.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item SExtRectDB">
+                                <h4 class="RTPCalc__table-item__title SExtRectDB">Площадь тушения (прямоугольная с 2-х
+                                    сторон)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer SExtRectDB" id="SExtRectDBAnswer"></div>
+                                <input class="RTPCalc__table-item__input SExtRectDB" type="number" id="SExtRectDBA"
+                                    placeholder="ШИРИНА ФРОНТА ТУШЕНИЯ">
+                                <input class="RTPCalc__table-item__input SExtRectDB" type="number" id="SExtRectDBDp"
+                                    placeholder="ГЛУБИНА ТУШЕНИЯ СТВОЛА">
+                                <button class="RTPCalc__table-item__button SExtRectDB btn"
+                                    id="SExtRectDB">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img SExtRectDB" src="images/rtpcalc/SExtRectDB.png"
+                                    alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item QExt">
+                                <h4 class="RTPCalc__table-item__title QExt">Требуемый расход на тушение(л/с, кг/с,
+                                    м<sup>3</sup>/с)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer QExt" id="QExtAnswer"></div>
+                                <input class="RTPCalc__table-item__input QExt" type="number" id="QExtA"
+                                    placeholder="ПЛОЩАДЬ/ОБЪЁМ/ФРОНТ">
+                                <input class="RTPCalc__table-item__input QExt" type="number" id="QExtDp"
+                                    placeholder="ГЛУБИНА ТУШЕНИЯ СТВОЛА">
+                                <button class="RTPCalc__table-item__button QExt btn" id="QExt">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img QExt" src="images/rtpcalc/QExt.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item QPr">
+                                <h4 class="RTPCalc__table-item__title QPr">Требуемый расход на защиту(л/с)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer QPr" id="QPrAnswer"></div>
+                                <input class="RTPCalc__table-item__input QPr" type="number" id="QPrA"
+                                    placeholder="РАССЧЁТНЫЙ ПАРАМЕТР">
+                                <input class="RTPCalc__table-item__input QPr" type="number" id="QPrDp"
+                                    placeholder="ИНТЕНСИВНОСТЬ ПОДАЧИ ОВ">
+                                <button class="RTPCalc__table-item__button QPr btn" id="QPr">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img QPr" src="images/rtpcalc/QPr.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item NStWt">
+                                <h4 class="RTPCalc__table-item__title NStWt">Кол-во приборов подачи ОВ(водяные стволы)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer NStWt" id="NStWtAnswer"></div>
+                                <input class="RTPCalc__table-item__input NStWt" type="number" id="NStWtA"
+                                    placeholder="ТРЕБУЕМЫЙ РАСХОД">
+                                <input class="RTPCalc__table-item__input NStWt" type="number" id="NStWtB"
+                                    placeholder="РАСХОД СТВОЛА(Л/С)">
+                                <button class="RTPCalc__table-item__button NStWt btn" id="NStWt">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img NStWt" src="images/rtpcalc/NStWt.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item NStFS">
+                                <h4 class="RTPCalc__table-item__title NStFS">Кол-во приборов подачи ОВ(пенные стволы -
+                                    поверхностное тушение)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer NStFS" id="NStFSAnswer"></div>
+                                <input class="RTPCalc__table-item__input NStFS" type="number" id="NStFSA"
+                                    placeholder="ПЛОЩАДЬ ТУШЕНИЯ">
+                                <input class="RTPCalc__table-item__input NStFS" type="number" id="NStFSB"
+                                    placeholder="ПЛОЩАДЬ ТУШЕНИЯ СТВОЛА">
+                                <button class="RTPCalc__table-item__button NStFS btn" id="NStFS">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img NStFS" src="images/rtpcalc/NStFS.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item NStFV">
+                                <h4 class="RTPCalc__table-item__title NStFV">Кол-во приборов подачи ОВ(пенные стволы -
+                                    объёмное тушение)
+                                </h4>
+                                <div class="RTPCalc__table-item__answer NStFV" id="NStFVAnswer"></div>
+                                <input class="RTPCalc__table-item__input NStFV" type="number" id="NStFVA"
+                                    placeholder="ОБЪЁМ ПОМЕЩЕНИЯ">
+                                <input class="RTPCalc__table-item__input NStFV" type="number" id="NStFVB"
+                                    placeholder="РАСХОД ПЕННОГО СТВОЛА">
+                                <button class="RTPCalc__table-item__button NStFV btn" id="NStFV">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img NStFV" src="images/rtpcalc/NStFV.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item TAStNW">
+                                <h4 class="RTPCalc__table-item__title TAStNW">Время работы стволов(без установки ПА на
+                                    водоисточник)</h4>
+                                <div class="RTPCalc__table-item__answer TAStNW" id="TAStNWAnswer"></div>
+                                <input class="RTPCalc__table-item__input TAStNW" type="number" id="TAStNWV1"
+                                    placeholder="ОБЪЁМ ВОДЫ В ПА">
+                                <input class="RTPCalc__table-item__input TAStNW" type="number" id="TAStNWN1"
+                                    placeholder="КОЛ-ВО РУКАВОВ">
+                                <input class="RTPCalc__table-item__input TAStNW" type="number" id="TAStNWV2"
+                                    placeholder="ОБЪЁМ ВОДЫ В РУКАВЕ">
+                                <input class="RTPCalc__table-item__input TAStNW" type="number" id="TAStNWN2"
+                                    placeholder="КОЛ-ВО РАБОТАЮЩИХ СТВОЛОВ">
+                                <input class="RTPCalc__table-item__input TAStNW" type="number" id="TAStNWQ"
+                                    placeholder="РАСХОД СТВОЛОВ">
+                                <button class="RTPCalc__table-item__button TAStNW btn" id="TAStNW">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img TAStNW" src="images/rtpcalc/TAStNW.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item TAStW">
+                                <h4 class="RTPCalc__table-item__title TAStW">Время работы стволов(с установкой ПА на
+                                    водоисточник)</h4>
+                                <div class="RTPCalc__table-item__answer TAStW" id="TAStWAnswer"></div>
+                                <input class="RTPCalc__table-item__input TAStW" type="number" id="TAStWV1"
+                                    placeholder="ЗАПАС ВОДЫ В ВОДОЁМЕ">
+                                <input class="RTPCalc__table-item__input TAStW" type="number" id="TAStWN1"
+                                    placeholder="КОЛ-ВО РУКАВОВ">
+                                <input class="RTPCalc__table-item__input TAStW" type="number" id="TAStWV2"
+                                    placeholder="ОБЪЁМ ВОДЫ В РУКАВЕ">
+                                <input class="RTPCalc__table-item__input TAStW" type="number" id="TAStWN2"
+                                    placeholder="КОЛ-ВО РАБОТАЮЩИХ УСТ-В">
+                                <input class="RTPCalc__table-item__input TAStW" type="number" id="TAStWQ"
+                                    placeholder="РАСХОД ОДНОГО УСТ-ВА">
+                                <button class="RTPCalc__table-item__button TAStW btn" id="TAStW">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img TAStW" src="images/rtpcalc/TAStW.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item TAGPSPO">
+                                <h4 class="RTPCalc__table-item__title TAGPSPO">Время работы ГПС-600(мин)</h4>
+                                <div class="RTPCalc__table-item__answer TAGPSPO" id="TAGPSPOAnswer"></div>
+                                <input class="RTPCalc__table-item__input TAGPSPO" type="number" id="TAGPSPO1"
+                                    placeholder="ОБЪЁМ ПО(литры)">
+                                <button class="RTPCalc__table-item__button TAGPSPO btn" id="TAGPSPO">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img TAGPSPO" src="images/rtpcalc/TAGPSPO.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item TAGPSW">
+                                <h4 class="RTPCalc__table-item__title TAGPSW">Время работы ГПС-600(мин)</h4>
+                                <div class="RTPCalc__table-item__answer TAGPSW" id="TAGPSWAnswer"></div>
+                                <input class="RTPCalc__table-item__input TAGPSW" type="number" id="TAGPSW1"
+                                    placeholder="ОБЪЁМ ВОДЫ(литры)">
+                                <button class="RTPCalc__table-item__button TAGPSW btn" id="TAGPSW">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img TAGPSW" src="images/rtpcalc/TAGPSW.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item UDoz">
+                                <h4 class="RTPCalc__table-item__title UDoz">Скорость заправки АЦ водой(мин)</h4>
+                                <div class="RTPCalc__table-item__answer UDoz" id="UDozAnswer"></div>
+                                <input class="RTPCalc__table-item__input UDoz" type="number" id="UDozV"
+                                    placeholder="ОБЪЁМ ЦИСТЕРНЫ">
+                                <input class="RTPCalc__table-item__input UDoz" type="number" id="UDozQ"
+                                    placeholder="СРЕДНЯЯ ПОДАЧА ВОДЫ">
+                                <button class="RTPCalc__table-item__button UDoz btn" id="UDoz">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img UDoz" src="images/rtpcalc/UDoz.png" alt="">
+                            </div>
+
+                            <div class="RTPCalc__table-item TQW">
+                                <h4 class="RTPCalc__table-item__title TQW">Время расхода воды из АЦ на пожаре(мин)</h4>
+                                <div class="RTPCalc__table-item__answer TQW" id="TQWAnswer"></div>
+                                <input class="RTPCalc__table-item__input TQW" type="number" id="TQWV"
+                                    placeholder="ОБЪЁМ ЦИСТЕРНЫ">
+                                <input class="RTPCalc__table-item__input TQW" type="number" id="TQWN"
+                                    placeholder="КОЛ-ВО СТВОЛОВ">
+                                <input class="RTPCalc__table-item__input TQW" type="number" id="TQWQ"
+                                    placeholder="РАСХОД ОДНОГО СТВОЛА">
+                                <button class="RTPCalc__table-item__button TQW btn" id="TQW">РАССЧИТАТЬ</button>
+                                <img class="RTPCalc__table-item__img TQW" src="images/rtpcalc/TQW.png" alt="">
+                            </div>
+
                         </div>
                     </div>
                 </div>
