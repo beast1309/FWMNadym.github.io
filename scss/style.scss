@@ -554,6 +554,44 @@
     }
 }
 
+.knowlage {
+
+    &__base {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        border: 2px solid #0293D4;
+        background: rgba(#0293D4, .8);
+        max-height: 380px;
+        overflow-y: scroll;
+        scrollbar-color: #0293D4 transparent;
+        gap: 60px;
+    }
+
+    .knowlage__base-item__theme.tactic {
+        display: none;
+    }
+
+    .knowlage__base-item__theme.tactic.--active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .knowlage__base-item__theme-info.tactic {
+        display: none;
+    }
+
+    .knowlage__base-item__theme-info.tactic.--acitve {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .knowlage__base-item__theme-info__img {
+        margin: 40px auto;
+        max-width: 70%;
+    }
+}
+
 .footer {
     padding: 40px 0 20px;
 

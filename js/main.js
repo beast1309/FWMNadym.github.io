@@ -1,5 +1,23 @@
 $(function () {
 
+    if (window.location.pathname == '/knowlageBase.html') {
+        $('#tactic').on('click', function () {
+            $('.knowlage__base-item__theme.tactic').toggleClass('--active')
+        })
+        $('#tactic-1').on('click', function () {
+            $('#tacticInfo-1').toggleClass('--acitve')
+        })
+        $('#tactic-2').on('click', function () {
+            $('#tacticInfo-2').toggleClass('--acitve')
+        })
+        $('#tactic-3').on('click', function () {
+            $('#tacticInfo-3').toggleClass('--acitve')
+        })
+        $('#tactic-4').on('click', function () {
+            $('#tacticInfo-4').toggleClass('--acitve')
+        })
+    }
+
     if (window.location.pathname == '/RTPCalc.html') {
         const TsrBtn = document.getElementById('TsrBtn')
         TsrBtn.addEventListener('click', function () {
@@ -426,8 +444,8 @@ $(function () {
         }),
 
 
-        // Создаем геообъект с типом геометрии "Точка".
-        myGeoObject = new ymaps.GeoObject();
+            // Создаем геообъект с типом геометрии "Точка".
+            myGeoObject = new ymaps.GeoObject();
 
 
         myMap.geoObjects
