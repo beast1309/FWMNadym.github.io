@@ -18,7 +18,7 @@ $(function () {
         })
     }
 
-    if (window.location.pathname == '/RTPCalc.html') {
+    if (window.location.pathname == 'https://beast1309.github.io/FWMNadym.github.io/RTPCalc.html') {
         const TsrBtn = document.getElementById('TsrBtn')
         TsrBtn.addEventListener('click', function () {
             const TsrTmess = document.getElementById('TsrTmess').value
