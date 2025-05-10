@@ -60,7 +60,223 @@ $(function () {
         }
     })
 
+    $('#SRec').on('click', function () {
+        const SRecA = document.getElementById('SRec-A').value
+        const SRecB = document.getElementById('SRec-B').value
 
+        answer = parseFloat(SRecA) * parseFloat(SRecB)
+        if (SRecA !== '' && SRecA !== null && SRecB !== '' && SRecB !== null) {
+            document.getElementById('SRecAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SRecDB').on('click', function () {
+        const SRecDBA = document.getElementById('SRecDB-A').value
+        const SRecDBB1 = document.getElementById('SRecDB-B1').value
+        const SRecDBB2 = document.getElementById('SRecDB-B2').value
+
+        answer = parseFloat(SRecDBA) * (parseFloat(SRecDBB1) + parseFloat(SRecDBB2))
+        if (SRecDBA !== '' && SRecDBA !== null && SRecDBB1 !== '' && SRecDBB1 !== null && SRecDBB2 !== '' && SRecDBB2 !== null) {
+            document.getElementById('SRecDBAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#PCir').on('click', function () {
+        const PCirR = document.getElementById('PCirR').value
+
+        answer = parseFloat(PCirR) * 2 * 3.14
+        if (PCirR !== '' && PCirR !== null) {
+            document.getElementById('PCirAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#PAng').on('click', function () {
+        const PAngAng = document.getElementById('PAng-ang').value
+        const PAngR = document.getElementById('PAngR').value
+
+        answer = parseFloat(PAngR) * (2 + (parseFloat(PAngAng / 360)))
+        if (PAngAng !== '' & PAngAng !== null && PAngR !== '' && PAngR !== null) {
+            document.getElementById('PAngAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#PRect').on('click', function () {
+        const PRectA = document.getElementById('PRect-a').value
+        const PRectB = document.getElementById('PRect-b').value
+
+        answer = 2 * (parseFloat(PRectA) + parseFloat(PRectB))
+        if (PRectA !== '' && PRectA !== null && PRectB !== '' && PRectB !== null) {
+            document.getElementById('PRectAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#PRectDB').on('click', function () {
+        const PRectDBA = document.getElementById('PRectDB-a').value
+        const PRectDBB1 = document.getElementById('PRectDB-b1').value
+        const PRectDBB2 = document.getElementById('PRectDB-b2').value
+
+        answer = 2 * parseFloat(PRectDBA) + (parseFloat(PRectDBB1) + parseFloat(PRectDBB2))
+        if (PRectDBA !== '' && PRectDBA !== null && PRectDBB1 !== '' && PRectDBB1 !== null && PRectDBB2 !== '' && PRectDBB2 !== null) {
+            document.getElementById('PRectDBAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SExtCir').on('click', function () {
+        const SExtCirR = document.getElementById('SExtCirR').value
+        const SExtCirDp = document.getElementById('SExtCirDp').value
+
+        answer = 3.14 * parseFloat(SExtCirDp) * (2 * parseFloat(SExtCirR) - parseFloat(SExtCirDp))
+        if (SExtCirR !== '' && SExtCirR !== null && SExtCirDp !== '' && SExtCirDp !== null) {
+            document.getElementById('SExtCirAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SExtAng').on('click', function () {
+        const SExtAngAng = document.getElementById('SExtAngAng').value
+        const SExtAngDp = document.getElementById('SExtAngDp').value
+        const SExtAngR = document.getElementById('SExtAngR').value
+
+        answer = parseFloat(SExtAngAng / 360) * 3.14 * parseFloat(SExtAngDp) * (2 * parseFloat(SExtAngR) - parseFloat(SExtAngDp))
+        if (SExtAngAng !== '' && SExtAngAng !== null && SExtAngDp !== '' && SExtAngDp !== null && SExtAngR !== '' && SExtAngR !== null) {
+            document.getElementById('SExtAngAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SExtRect').on('click', function () {
+        const SExtRectA = document.getElementById('SExtRectA').value
+        const SExtRectDp = document.getElementById('SExtRectDp').value
+
+        answer = parseFloat(SExtRectA) * parseFloat(SExtRectDp)
+        if (SExtRectA !== '' && SExtRectA !== null && SExtRectDp !== '' && SExtRectDp !== null) {
+            document.getElementById('SExtRectAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SExtRectDB').on('click', function () {
+        const SExtRectDBA = document.getElementById('SExtRectDBA').value
+        const SExtRectDBDp = document.getElementById('SExtRectDBDp').value
+
+        answer = 2 * parseFloat(SExtRectDBDp) * parseFloat(SExtRectDBA)
+        if (SExtRectDBDp !== '' && SExtRectDBDp !== null && SExtRectDBA !== '' && SExtRectDBA !== null) {
+            document.getElementById('SExtRectDBAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#QExt').on('click', function () {
+        const QExtA = document.getElementById('QExtA').value
+        const QExtDp = document.getElementById('QExtDp').value
+
+        answer = parseFloat(QExtA) * parseFloat(QExtDp)
+        if (QExt !== '' && QExt !== null && QExtDp !== '' && QExtDp !== null) {
+            document.getElementById('QExtAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#QPr').on('click', function () {
+        const QPrA = document.getElementById('QPrA').value
+        const QPrDp = document.getElementById('QPrDp').value
+
+        answer = parseFloat(QPrA) * parseFloat(QPrDp)
+        if (QPrA !== '' && QPrA !== null && QPrDp !== '' && QPrDp !== null) {
+            document.getElementById('QPrAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#NStWt').on('click', function () {
+        const NStWtA = document.getElementById('NStWtA').value
+        const NStWtB = document.getElementById('NStWtB').value
+
+        answer = parseFloat(NStWtA) / parseFloat(NStWtB)
+        if (NStWtA !== '' && NStWtA !== null && NStWtB !== '' && NStWtB !== null && NStWtB !== 0) {
+            document.getElementById('NStWtAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#NStFS').on('click', function () {
+        const NStFSA = document.getElementById('NStFSA').value
+        const NStFSB = document.getElementById('NStFSB').value
+
+        answer = parseFloat(NStFSA) / parseFloat(NStFSB)
+        if (NStFSA !== '' && NStFSA !== null && NStFSB !== '' && NStFSB !== null && NStFSB !== 0) {
+            document.getElementById('NStFSAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#NStFV').on('click', function () {
+        const NStFVA = document.getElementById('NStFVA').value
+        const NStFVB = document.getElementById('NStFVB').value
+
+        answer = (parseFloat(NStFVA) * 3) / (parseFloat(NStFVB) / 15)
+        if (NStFVA !== '' && NStFVA !== null && NStFVB !== '' && NStFVB !== null) {
+            document.getElementById('NStFVAnswer').innerText = Math.ceil(answer)
+        }
+    })
+
+    $('#TAStNW').on('click', function () {
+        const TAStNWV1 = document.getElementById('TAStNWV1').value
+        const TAStNWV2 = document.getElementById('TAStNWV2').value
+        const TAStNWN1 = document.getElementById('TAStNWN1').value
+        const TAStNWN2 = document.getElementById('TAStNWN2').value
+        const TAStNWQ = document.getElementById('TAStNWQ').value
+
+        answer = (parseFloat(TAStNWV1) - parseFloat(TAStNWN1) * parseFloat(TAStNWV2)) / (parseFloat(TAStNWN2) * parseFloat(TAStNWQ) * 60)
+        if (TAStNWV1 !== '' && TAStNWV1 !== null && TAStNWN1 !== '' && TAStNWN1 !== null && TAStNWV2 !== '' && TAStNWV2 !== null && TAStNWN2 !== '' && TAStNWN2 !== null && TAStNWQ !== '' && TAStNWQ !== null) {
+            document.getElementById('TAStNWAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#TAStW').on('click', function () {
+        const TAStWV1 = document.getElementById('TAStWV1').value
+        const TAStWV2 = document.getElementById('TAStWV2').value
+        const TAStWN1 = document.getElementById('TAStWN1').value
+        const TAStWN2 = document.getElementById('TAStWN2').value
+        const TAStWQ = document.getElementById('TAStWQ').value
+
+        answer = (0.9 * parseFloat(TAStWV1) - parseFloat(TAStWN1) * parseFloat(TAStWV2)) / (parseFloat(TAStWQ) * parseFloat(TAStWN2) * 60)
+        if (TAStWV1 !== '' && TAStWV1 !== null && TAStWV2 !== '' && TAStWV2 !== null && TAStWN1 !== '' && TAStWN1 !== null && TAStWN2 !== '' && TAStWN2 !== null && TAStWQ !== '' && TAStWQ !== null) {
+            document.getElementById('TAStWAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#TAGPSPO').on('click', function () {
+        const TAGPSPO1 = document.getElementById('TAGPSPO1').value
+
+        answer = parseFloat(TAGPSPO1) / 0.36
+        if (TAGPSPO1 !== '' && TAGPSPO1 !== null) {
+            document.getElementById('TAGPSPOAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#TAGPSW').on('click', function () {
+        const TAGPSW1 = document.getElementById('TAGPSW1').value
+
+        answer = parseFloat(TAGPSW1) / 5.64
+        if (TAGPSW1 !== '' && TAGPSW1 !== null) {
+            document.getElementById('TAGPSWAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#UDoz').on('click', function () {
+        const UDozV = document.getElementById('UDozV').value
+        const UDozQ = document.getElementById('UDozQ').value
+
+        answer = parseFloat(UDozV) / (parseFloat(UDozQ) * 60)
+        if (UDozV !== '' && UDozV !== null && UDozQ !== '' && UDozQ !== null) {
+            document.getElementById('UDozAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#TQW').on('click', function () {
+        const TQWV = document.getElementById('TQWV').value
+        const TQWN = document.getElementById('TQWN').value
+        const TQWQ = document.getElementById('TQWQ').value
+
+        answer = parseFloat(TQWV) / (parseFloat(TQWN) * parseFloat(TQWQ) * 60)
+        if (TQWV !== '' && TQWV !== null && TQWN !== '' && TQWN !== null && TQWQ !== '' && TQWQ !== null) {
+            document.getElementById('TQWAnswer').innerText = answer.toFixed(2)
+        }
+    })
+    /* формулы РТП-рассчётов */
 
     if (window.location.pathname == '/RTPCalc.html') {
         /* const TsrBtn = document.getElementById('TsrBtn')
@@ -129,7 +345,7 @@ $(function () {
             }
         }) */
 
-        const SRec = document.getElementById('SRec')
+        /* const SRec = document.getElementById('SRec')
         SRec.addEventListener('click', function () {
             const SRecA = document.getElementById('SRec-A').value
             const SRecB = document.getElementById('SRec-B').value
@@ -138,31 +354,31 @@ $(function () {
             if (SRecA !== '' && SRecA !== null && SRecB !== '' && SRecB !== null) {
                 document.getElementById('SRecAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const SRecDB = document.getElementById('SRecDB')
-        SRecDB.addEventListener('click', function () {
-            const SRecDBA = document.getElementById('SRecDB-A').value
-            const SRecDBB1 = document.getElementById('SRecDB-B1').value
-            const SRecDBB2 = document.getElementById('SRecDB-B2').value
+        /*    const SRecDB = document.getElementById('SRecDB')
+           SRecDB.addEventListener('click', function () {
+               const SRecDBA = document.getElementById('SRecDB-A').value
+               const SRecDBB1 = document.getElementById('SRecDB-B1').value
+               const SRecDBB2 = document.getElementById('SRecDB-B2').value
+   
+               answer = parseFloat(SRecDBA) * (parseFloat(SRecDBB1) + parseFloat(SRecDBB2))
+               if (SRecDBA !== '' && SRecDBA !== null && SRecDBB1 !== '' && SRecDBB1 !== null && SRecDBB2 !== '' && SRecDBB2 !== null) {
+                   document.getElementById('SRecDBAnswer').innerText = answer.toFixed(2)
+               }
+           }) */
 
-            answer = parseFloat(SRecDBA) * (parseFloat(SRecDBB1) + parseFloat(SRecDBB2))
-            if (SRecDBA !== '' && SRecDBA !== null && SRecDBB1 !== '' && SRecDBB1 !== null && SRecDBB2 !== '' && SRecDBB2 !== null) {
-                document.getElementById('SRecDBAnswer').innerText = answer.toFixed(2)
-            }
-        })
+        /*   const PCir = document.getElementById('PCir')
+          PCir.addEventListener('click', function () {
+              const PCirR = document.getElementById('PCirR').value
+  
+              answer = parseFloat(PCirR) * 2 * 3.14
+              if (PCirR !== '' && PCirR !== null) {
+                  document.getElementById('PCirAnswer').innerText = answer.toFixed(2)
+              }
+          }) */
 
-        const PCir = document.getElementById('PCir')
-        PCir.addEventListener('click', function () {
-            const PCirR = document.getElementById('PCirR').value
-
-            answer = parseFloat(PCirR) * 2 * 3.14
-            if (PCirR !== '' && PCirR !== null) {
-                document.getElementById('PCirAnswer').innerText = answer.toFixed(2)
-            }
-        })
-
-        const PAng = document.getElementById('PAng')
+        /* const PAng = document.getElementById('PAng')
         PAng.addEventListener('click', function () {
             const PAngAng = document.getElementById('PAng-ang').value
             const PAngR = document.getElementById('PAngR').value
@@ -171,20 +387,20 @@ $(function () {
             if (PAngAng !== '' & PAngAng !== null && PAngR !== '' && PAngR !== null) {
                 document.getElementById('PAngAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const PRect = document.getElementById('PRect')
-        PRect.addEventListener('click', function () {
-            const PRectA = document.getElementById('PRect-a').value
-            const PRectB = document.getElementById('PRect-b').value
+        /*  const PRect = document.getElementById('PRect')
+         PRect.addEventListener('click', function () {
+             const PRectA = document.getElementById('PRect-a').value
+             const PRectB = document.getElementById('PRect-b').value
+ 
+             answer = 2 * (parseFloat(PRectA) + parseFloat(PRectB))
+             if (PRectA !== '' && PRectA !== null && PRectB !== '' && PRectB !== null) {
+                 document.getElementById('PRectAnswer').innerText = answer.toFixed(2)
+             }
+         }) */
 
-            answer = 2 * (parseFloat(PRectA) + parseFloat(PRectB))
-            if (PRectA !== '' && PRectA !== null && PRectB !== '' && PRectB !== null) {
-                document.getElementById('PRectAnswer').innerText = answer.toFixed(2)
-            }
-        })
-
-        const PRectDB = document.getElementById('PRectDB')
+        /* const PRectDB = document.getElementById('PRectDB')
         PRectDB.addEventListener('click', function () {
             const PRectDBA = document.getElementById('PRectDB-a').value
             const PRectDBB1 = document.getElementById('PRectDB-b1').value
@@ -194,20 +410,20 @@ $(function () {
             if (PRectDBA !== '' && PRectDBA !== null && PRectDBB1 !== '' && PRectDBB1 !== null && PRectDBB2 !== '' && PRectDBB2 !== null) {
                 document.getElementById('PRectDBAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const SExtCir = document.getElementById('SExtCir')
-        SExtCir.addEventListener('click', function () {
-            const SExtCirR = document.getElementById('SExtCirR').value
-            const SExtCirDp = document.getElementById('SExtCirDp').value
+        /*  const SExtCir = document.getElementById('SExtCir')
+         SExtCir.addEventListener('click', function () {
+             const SExtCirR = document.getElementById('SExtCirR').value
+             const SExtCirDp = document.getElementById('SExtCirDp').value
+ 
+             answer = 3.14 * parseFloat(SExtCirDp) * (2 * parseFloat(SExtCirR) - parseFloat(SExtCirDp))
+             if (SExtCirR !== '' && SExtCirR !== null && SExtCirDp !== '' && SExtCirDp !== null) {
+                 document.getElementById('SExtCirAnswer').innerText = answer.toFixed(2)
+             }
+         }) */
 
-            answer = 3.14 * parseFloat(SExtCirDp) * (2 * parseFloat(SExtCirR) - parseFloat(SExtCirDp))
-            if (SExtCirR !== '' && SExtCirR !== null && SExtCirDp !== '' && SExtCirDp !== null) {
-                document.getElementById('SExtCirAnswer').innerText = answer.toFixed(2)
-            }
-        })
-
-        const SExtAng = document.getElementById('SExtAng')
+        /* const SExtAng = document.getElementById('SExtAng')
         SExtAng.addEventListener('click', function () {
             const SExtAngAng = document.getElementById('SExtAngAng').value
             const SExtAngDp = document.getElementById('SExtAngDp').value
@@ -217,9 +433,9 @@ $(function () {
             if (SExtAngAng !== '' && SExtAngAng !== null && SExtAngDp !== '' && SExtAngDp !== null && SExtAngR !== '' && SExtAngR !== null) {
                 document.getElementById('SExtAngAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const SExtRect = document.getElementById('SExtRect')
+        /* const SExtRect = document.getElementById('SExtRect')
         SExtRect.addEventListener('click', function () {
             const SExtRectA = document.getElementById('SExtRectA').value
             const SExtRectDp = document.getElementById('SExtRectDp').value
@@ -228,9 +444,9 @@ $(function () {
             if (SExtRectA !== '' && SExtRectA !== null && SExtRectDp !== '' && SExtRectDp !== null) {
                 document.getElementById('SExtRectAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const SExtRectDB = document.getElementById('SExtRectDB')
+        /* const SExtRectDB = document.getElementById('SExtRectDB')
         SExtRectDB.addEventListener('click', function () {
             const SExtRectDBA = document.getElementById('SExtRectDBA').value
             const SExtRectDBDp = document.getElementById('SExtRectDBDp').value
@@ -239,9 +455,9 @@ $(function () {
             if (SExtRectDBDp !== '' && SExtRectDBDp !== null && SExtRectDBA !== '' && SExtRectDBA !== null) {
                 document.getElementById('SExtRectDBAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const QExt = document.getElementById('QExt')
+        /* const QExt = document.getElementById('QExt')
         QExt.addEventListener('click', function () {
             const QExtA = document.getElementById('QExtA').value
             const QExtDp = document.getElementById('QExtDp').value
@@ -250,9 +466,9 @@ $(function () {
             if (QExt !== '' && QExt !== null && QExtDp !== '' && QExtDp !== null) {
                 document.getElementById('QExtAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const QPr = document.getElementById('QPr')
+        /* const QPr = document.getElementById('QPr')
         QPr.addEventListener('click', function () {
             const QPrA = document.getElementById('QPrA').value
             const QPrDp = document.getElementById('QPrDp').value
@@ -261,9 +477,9 @@ $(function () {
             if (QPrA !== '' && QPrA !== null && QPrDp !== '' && QPrDp !== null) {
                 document.getElementById('QPrAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const NStWt = document.getElementById('NStWt')
+        /* const NStWt = document.getElementById('NStWt')
         NStWt.addEventListener('click', function () {
             const NStWtA = document.getElementById('NStWtA').value
             const NStWtB = document.getElementById('NStWtB').value
@@ -272,9 +488,9 @@ $(function () {
             if (NStWtA !== '' && NStWtA !== null && NStWtB !== '' && NStWtB !== null && NStWtB !== 0) {
                 document.getElementById('NStWtAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const NStFS = document.getElementById('NStFS')
+        /* const NStFS = document.getElementById('NStFS')
         NStFS.addEventListener('click', function () {
             const NStFSA = document.getElementById('NStFSA').value
             const NStFSB = document.getElementById('NStFSB').value
@@ -283,9 +499,9 @@ $(function () {
             if (NStFSA !== '' && NStFSA !== null && NStFSB !== '' && NStFSB !== null && NStFSB !== 0) {
                 document.getElementById('NStFSAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const NStFV = document.getElementById('NStFV')
+        /* const NStFV = document.getElementById('NStFV')
         NStFV.addEventListener('click', function () {
             const NStFVA = document.getElementById('NStFVA').value
             const NStFVB = document.getElementById('NStFVB').value
@@ -294,9 +510,9 @@ $(function () {
             if (NStFVA !== '' && NStFVA !== null && NStFVB !== '' && NStFVB !== null) {
                 document.getElementById('NStFVAnswer').innerText = Math.ceil(answer)
             }
-        })
+        }) */
 
-        const TAStNW = document.getElementById('TAStNW')
+        /* const TAStNW = document.getElementById('TAStNW')
         TAStNW.addEventListener('click', function () {
             const TAStNWV1 = document.getElementById('TAStNWV1').value
             const TAStNWV2 = document.getElementById('TAStNWV2').value
@@ -308,9 +524,9 @@ $(function () {
             if (TAStNWV1 !== '' && TAStNWV1 !== null && TAStNWN1 !== '' && TAStNWN1 !== null && TAStNWV2 !== '' && TAStNWV2 !== null && TAStNWN2 !== '' && TAStNWN2 !== null && TAStNWQ !== '' && TAStNWQ !== null) {
                 document.getElementById('TAStNWAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const TAStW = document.getElementById('TAStW')
+        /* const TAStW = document.getElementById('TAStW')
         TAStW.addEventListener('click', function () {
             const TAStWV1 = document.getElementById('TAStWV1').value
             const TAStWV2 = document.getElementById('TAStWV2').value
@@ -322,9 +538,9 @@ $(function () {
             if (TAStWV1 !== '' && TAStWV1 !== null && TAStWV2 !== '' && TAStWV2 !== null && TAStWN1 !== '' && TAStWN1 !== null && TAStWN2 !== '' && TAStWN2 !== null && TAStWQ !== '' && TAStWQ !== null) {
                 document.getElementById('TAStWAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const TAGPSPO = document.getElementById('TAGPSPO')
+        /* const TAGPSPO = document.getElementById('TAGPSPO')
         TAGPSPO.addEventListener('click', function () {
             const TAGPSPO1 = document.getElementById('TAGPSPO1').value
 
@@ -332,9 +548,9 @@ $(function () {
             if (TAGPSPO1 !== '' && TAGPSPO1 !== null) {
                 document.getElementById('TAGPSPOAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const TAGPSW = document.getElementById('TAGPSW')
+        /* const TAGPSW = document.getElementById('TAGPSW')
         TAGPSW.addEventListener('click', function () {
             const TAGPSW1 = document.getElementById('TAGPSW1').value
 
@@ -342,9 +558,9 @@ $(function () {
             if (TAGPSW1 !== '' && TAGPSW1 !== null) {
                 document.getElementById('TAGPSWAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const UDoz = document.getElementById('UDoz')
+        /* const UDoz = document.getElementById('UDoz')
         UDoz.addEventListener('click', function () {
             const UDozV = document.getElementById('UDozV').value
             const UDozQ = document.getElementById('UDozQ').value
@@ -353,9 +569,9 @@ $(function () {
             if (UDozV !== '' && UDozV !== null && UDozQ !== '' && UDozQ !== null) {
                 document.getElementById('UDozAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const TQW = document.getElementById('TQW')
+        /* const TQW = document.getElementById('TQW')
         TQW.addEventListener('click', function () {
             const TQWV = document.getElementById('TQWV').value
             const TQWN = document.getElementById('TQWN').value
@@ -365,7 +581,7 @@ $(function () {
             if (TQWV !== '' && TQWV !== null && TQWN !== '' && TQWN !== null && TQWQ !== '' && TQWQ !== null) {
                 document.getElementById('TQWAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
     }
 
