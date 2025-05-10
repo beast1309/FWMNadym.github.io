@@ -1,6 +1,6 @@
 $(function () {
 
-    if (window.location.pathname == '/knowlageBase.html') {
+    function knowlageBase() {
         $('#tactic').on('click', function () {
             $('.knowlage__base-item__theme.tactic').toggleClass('--active')
         })
@@ -18,7 +18,7 @@ $(function () {
         })
     }
 
-    if (window.location.pathname == 'https://beast1309.github.io/FWMNadym.github.io/RTPCalc.html') {
+    if (window.location.pathname == '/RTPCalc.html') {
         const TsrBtn = document.getElementById('TsrBtn')
         TsrBtn.addEventListener('click', function () {
             const TsrTmess = document.getElementById('TsrTmess').value
@@ -1657,4 +1657,10 @@ $(function () {
         document.getElementById('Tback').innerHTML = Tback
         document.getElementById('FastPmin__on').innerHTML = FastPmin__on
     })
+
+    switch (window.location.pathname) {
+        case '/knowlageBase.html': knowlageBase()
+            break
+
+    }
 });
