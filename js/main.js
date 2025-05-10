@@ -18,6 +18,16 @@ $(function () {
         })
     }
 
+    function RTPCalc() {
+
+    }
+
+    switch (window.location.pathname) {
+        case '/knowlageBase.html': knowlageBase()
+            break
+
+    }
+
     if (window.location.pathname == '/RTPCalc.html') {
         const TsrBtn = document.getElementById('TsrBtn')
         TsrBtn.addEventListener('click', function () {
@@ -1657,10 +1667,4 @@ $(function () {
         document.getElementById('Tback').innerHTML = Tback
         document.getElementById('FastPmin__on').innerHTML = FastPmin__on
     })
-
-    switch (window.location.pathname) {
-        case '/knowlageBase.html': knowlageBase()
-            break
-
-    }
 });
