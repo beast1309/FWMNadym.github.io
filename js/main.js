@@ -1,4 +1,4 @@
-function knowlageBase() {
+async function knowlageBase() {
     $('#tactic').on('click', function () {
         $('.knowlage__base-item__theme.tactic').toggleClass('--active')
     })
