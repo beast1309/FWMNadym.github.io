@@ -1,5 +1,7 @@
 $(function () {
 
+
+
     $('#TsrBtn').on('click', function () {
         const TsrTmess = document.getElementById('TsrTmess').value
         const TsrTbr = document.getElementById('TsrTbr').value
@@ -1653,7 +1655,8 @@ $(function () {
 
 
     $('#tactic').on('click', function () {
-        $('.knowlage__base-item__theme.tactic').toggleClass('--active')
+        /* $('.knowlage__base-item__theme.tactic').toggleClass('--active') */
+        document.querySelector('.knowlage__base-item__theme.tactic').classList.add('--active')
     })
     $('#tactic-1').on('click', function () {
         $('#tacticInfo-1').toggleClass('--acitve')
