@@ -1,19 +1,24 @@
 async function knowlageBase() {
-    $('#tactic').on('click', function () {
+    /* $('#tactic').on('click', function () {
         $('.knowlage__base-item__theme.tactic').toggleClass('--active')
+    }) */
+
+    document.getElementById('tactic').addEventListener('click', function () {
+        document.querySelector('.knowlage__base-item__theme.tactic').classList.add('--active')
     })
-    $('#tactic-1').on('click', function () {
-        $('#tacticInfo-1').toggleClass('--acitve')
-    })
-    $('#tactic-2').on('click', function () {
-        $('#tacticInfo-2').toggleClass('--acitve')
-    })
-    $('#tactic-3').on('click', function () {
-        $('#tacticInfo-3').toggleClass('--acitve')
-    })
-    $('#tactic-4').on('click', function () {
-        $('#tacticInfo-4').toggleClass('--acitve')
-    })
+
+    /*  $('#tactic-1').on('click', function () {
+         $('#tacticInfo-1').toggleClass('--acitve')
+     })
+     $('#tactic-2').on('click', function () {
+         $('#tacticInfo-2').toggleClass('--acitve')
+     })
+     $('#tactic-3').on('click', function () {
+         $('#tacticInfo-3').toggleClass('--acitve')
+     })
+     $('#tactic-4').on('click', function () {
+         $('#tacticInfo-4').toggleClass('--acitve')
+     }) */
 }
 
 switch (window.location.pathname) {
