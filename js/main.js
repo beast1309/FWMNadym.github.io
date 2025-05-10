@@ -1,45 +1,18 @@
-async function knowlageBase() {
-    /* $('#tactic').on('click', function () {
-        $('.knowlage__base-item__theme.tactic').toggleClass('--active')
-    }) */
-
-    document.getElementById('tactic').addEventListener('click', function () {
-        document.querySelector('.knowlage__base-item__theme.tactic').classList.add('--active')
-    })
-
-    /*  $('#tactic-1').on('click', function () {
-         $('#tacticInfo-1').toggleClass('--acitve')
-     })
-     $('#tactic-2').on('click', function () {
-         $('#tacticInfo-2').toggleClass('--acitve')
-     })
-     $('#tactic-3').on('click', function () {
-         $('#tacticInfo-3').toggleClass('--acitve')
-     })
-     $('#tactic-4').on('click', function () {
-         $('#tacticInfo-4').toggleClass('--acitve')
-     }) */
-}
-
-switch (window.location.pathname) {
-    case '/knowlageBase.html': knowlageBase()
-        break
-
-}
-
-
 $(function () {
 
+    $('#TsrBtn').on('click', function () {
+        const TsrTmess = document.getElementById('TsrTmess').value
+        const TsrTbr = document.getElementById('TsrTbr').value
+        const TsrTsld = document.getElementById('TsrTsld').value
 
-
-    function RTPCalc() {
-
-    }
-
-
+        answer = parseInt(TsrTmess) + parseInt(TsrTbr) + parseInt(TsrTsld) + 1
+        if (TsrTsld !== '' && TsrTsld !== null) {
+            document.getElementById('TsrAnswer').innerText = parseInt(answer)
+        }
+    })
 
     if (window.location.pathname == '/RTPCalc.html') {
-        const TsrBtn = document.getElementById('TsrBtn')
+        /* const TsrBtn = document.getElementById('TsrBtn')
         TsrBtn.addEventListener('click', function () {
             const TsrTmess = document.getElementById('TsrTmess').value
             const TsrTbr = document.getElementById('TsrTbr').value
@@ -49,7 +22,7 @@ $(function () {
             if (TsrTsld !== '' && TsrTsld !== null) {
                 document.getElementById('TsrAnswer').innerText = parseInt(answer)
             }
-        })
+        }) */
 
         const TslBtn = document.getElementById('TslBtn')
         TslBtn.addEventListener('click', function () {
@@ -1676,5 +1649,22 @@ $(function () {
         document.getElementById('Tjob').innerHTML = Math.floor(Tjob)
         document.getElementById('Tback').innerHTML = Tback
         document.getElementById('FastPmin__on').innerHTML = FastPmin__on
+    })
+
+
+    $('#tactic').on('click', function () {
+        $('.knowlage__base-item__theme.tactic').toggleClass('--active')
+    })
+    $('#tactic-1').on('click', function () {
+        $('#tacticInfo-1').toggleClass('--acitve')
+    })
+    $('#tactic-2').on('click', function () {
+        $('#tacticInfo-2').toggleClass('--acitve')
+    })
+    $('#tactic-3').on('click', function () {
+        $('#tacticInfo-3').toggleClass('--acitve')
+    })
+    $('#tactic-4').on('click', function () {
+        $('#tacticInfo-4').toggleClass('--acitve')
     })
 });
