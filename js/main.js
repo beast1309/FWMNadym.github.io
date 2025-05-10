@@ -1,7 +1,5 @@
 $(function () {
 
-
-
     $('#TsrBtn').on('click', function () {
         const TsrTmess = document.getElementById('TsrTmess').value
         const TsrTbr = document.getElementById('TsrTbr').value
@@ -12,6 +10,57 @@ $(function () {
             document.getElementById('TsrAnswer').innerText = parseInt(answer)
         }
     })
+
+    $('#TslBtn').on('click', function () {
+        const TslL = document.getElementById('L').value
+        const TslVsr = document.getElementById('Vsr').value
+
+        answer = parseInt(TslL) * 60 / parseInt(TslVsr)
+        if (TslL !== '' && TslL !== null && TslVsr !== '' && TslVsr !== null) {
+            document.getElementById('TslAnswer').innerText = parseInt(answer)
+        }
+    })
+
+    $('#LpojBtn').on('click', function () {
+        const LpojV = document.getElementById('LpojV').value
+        const LpojT = document.getElementById('LpojT').value
+
+        answer = LpojV * 0.5 * parseInt(LpojT)
+        if (LpojV !== '' && LpojV !== null && LpojT !== '' && LpojT !== null) {
+            document.getElementById('LpojAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#LpojBtn-10').on('click', function () {
+        const LpojV10 = document.getElementById('LpojV-10').value
+        const LpojT10 = document.getElementById('LpojT-10').value
+
+        answer = LpojV10 * 0.5 * 10 + LpojV10 * (parseInt(LpojT10) - 10)
+        if (LpojV10 !== '' && LpojV10 !== null && LpojT10 !== '' && LpojT10 !== null) {
+            document.getElementById('LpojAnswer-10').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SRad').on('click', function () {
+        const SRadLput = document.getElementById('SRad-Lput').value
+
+        answer = (parseFloat(SRadLput * SRadLput)) * 3.14
+        if (SRadLput !== '' && SRadLput !== null) {
+            document.getElementById('SRadAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+    $('#SAng').on('click', function () {
+        const SAngLput = document.getElementById('SAng-Lput').value
+        const SAngang = document.getElementById('SAng-ang').value
+
+        answer = (parseFloat(SAngLput) * parseFloat(SAngLput)) * parseFloat(SAngang / 360) * 3.14
+        if (SAngLput !== '' && SAngLput !== null && SAngang !== '' && SAngang !== null) {
+            document.getElementById('SAngAnswer').innerText = answer.toFixed(2)
+        }
+    })
+
+
 
     if (window.location.pathname == '/RTPCalc.html') {
         /* const TsrBtn = document.getElementById('TsrBtn')
@@ -26,7 +75,7 @@ $(function () {
             }
         }) */
 
-        const TslBtn = document.getElementById('TslBtn')
+        /* const TslBtn = document.getElementById('TslBtn')
         TslBtn.addEventListener('click', function () {
             const TslL = document.getElementById('L').value
             const TslVsr = document.getElementById('Vsr').value
@@ -35,9 +84,9 @@ $(function () {
             if (TslL !== '' && TslL !== null && TslVsr !== '' && TslVsr !== null) {
                 document.getElementById('TslAnswer').innerText = parseInt(answer)
             }
-        })
+        }) */
 
-        const LpojBtn = document.getElementById('LpojBtn')
+        /* const LpojBtn = document.getElementById('LpojBtn')
         LpojBtn.addEventListener('click', function () {
             const LpojV = document.getElementById('LpojV').value
             const LpojT = document.getElementById('LpojT').value
@@ -46,9 +95,9 @@ $(function () {
             if (LpojV !== '' && LpojV !== null && LpojT !== '' && LpojT !== null) {
                 document.getElementById('LpojAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const LpojBtn10 = document.getElementById('LpojBtn-10')
+        /* const LpojBtn10 = document.getElementById('LpojBtn-10')
         LpojBtn10.addEventListener('click', function () {
             const LpojV10 = document.getElementById('LpojV-10').value
             const LpojT10 = document.getElementById('LpojT-10').value
@@ -57,9 +106,9 @@ $(function () {
             if (LpojV10 !== '' && LpojV10 !== null && LpojT10 !== '' && LpojT10 !== null) {
                 document.getElementById('LpojAnswer-10').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const SRad = document.getElementById('SRad')
+        /* const SRad = document.getElementById('SRad')
         SRad.addEventListener('click', function () {
             const SRadLput = document.getElementById('SRad-Lput').value
 
@@ -67,9 +116,9 @@ $(function () {
             if (SRadLput !== '' && SRadLput !== null) {
                 document.getElementById('SRadAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
-        const SAng = document.getElementById('SAng')
+        /* const SAng = document.getElementById('SAng')
         SAng.addEventListener('click', function () {
             const SAngLput = document.getElementById('SAng-Lput').value
             const SAngang = document.getElementById('SAng-ang').value
@@ -78,7 +127,7 @@ $(function () {
             if (SAngLput !== '' && SAngLput !== null && SAngang !== '' && SAngang !== null) {
                 document.getElementById('SAngAnswer').innerText = answer.toFixed(2)
             }
-        })
+        }) */
 
         const SRec = document.getElementById('SRec')
         SRec.addEventListener('click', function () {
