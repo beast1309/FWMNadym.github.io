@@ -1,32 +1,37 @@
+function knowlageBase() {
+    $('#tactic').on('click', function () {
+        $('.knowlage__base-item__theme.tactic').toggleClass('--active')
+    })
+    $('#tactic-1').on('click', function () {
+        $('#tacticInfo-1').toggleClass('--acitve')
+    })
+    $('#tactic-2').on('click', function () {
+        $('#tacticInfo-2').toggleClass('--acitve')
+    })
+    $('#tactic-3').on('click', function () {
+        $('#tacticInfo-3').toggleClass('--acitve')
+    })
+    $('#tactic-4').on('click', function () {
+        $('#tacticInfo-4').toggleClass('--acitve')
+    })
+}
+
+switch (window.location.pathname) {
+    case '/knowlageBase.html': knowlageBase()
+        break
+
+}
+
+
 $(function () {
 
-    function knowlageBase() {
-        $('#tactic').on('click', function () {
-            $('.knowlage__base-item__theme.tactic').toggleClass('--active')
-        })
-        $('#tactic-1').on('click', function () {
-            $('#tacticInfo-1').toggleClass('--acitve')
-        })
-        $('#tactic-2').on('click', function () {
-            $('#tacticInfo-2').toggleClass('--acitve')
-        })
-        $('#tactic-3').on('click', function () {
-            $('#tacticInfo-3').toggleClass('--acitve')
-        })
-        $('#tactic-4').on('click', function () {
-            $('#tacticInfo-4').toggleClass('--acitve')
-        })
-    }
+
 
     function RTPCalc() {
 
     }
 
-    switch (window.location.pathname) {
-        case '/knowlageBase.html': knowlageBase()
-            break
 
-    }
 
     if (window.location.pathname == '/RTPCalc.html') {
         const TsrBtn = document.getElementById('TsrBtn')
