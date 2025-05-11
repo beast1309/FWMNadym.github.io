@@ -1782,6 +1782,10 @@ $(function () {
                     break
                 case 'SE': windDir = 'ЮВ'
                     break
+                case 'NW': windDir = 'СЗ'
+                    break
+                case 'NNW': windDir = 'ССЗ'
+                    break
                 case 'WNW': windDir = 'ЗСЗ'
                     break
                 case 'WSW': windDir = 'ЗЮЗ'
@@ -1918,10 +1922,15 @@ $(function () {
         document.getElementById('FastPmin__on').innerHTML = FastPmin__on
     })
 
-
+    /* база знаний -->*/
     $('#tactic').on('click', function () {
         /* $('.knowlage__base-item__theme.tactic').toggleClass('--active') */
-        document.querySelector('.knowlage__base-item__theme.tactic').classList.add('--active')
+        if (document.querySelector('.knowlage__base-item__theme.tactic').classList.contains('--active')) {
+            document.querySelector('.knowlage__base-item__theme.tactic').classList.remove('--active')
+        }
+        else if (!document.querySelector('.knowlage__base-item__theme.tactic').classList.contains('--active')) {
+            document.querySelector('.knowlage__base-item__theme.tactic').classList.add('--active')
+        }
     })
     $('#tactic-1').on('click', function () {
         $('#tacticInfo-1').toggleClass('--acitve')
@@ -1935,4 +1944,26 @@ $(function () {
     $('#tactic-4').on('click', function () {
         $('#tacticInfo-4').toggleClass('--acitve')
     })
+    $('#tactic-5').on('click', function () {
+        $('#tacticInfo-5').toggleClass('--acitve')
+    })
+    $('#tactic-6').on('click', function () {
+        $('#tacticInfo-6').toggleClass('--acitve')
+    })
+    $('#tactic-7').on('click', function () {
+        $('#tacticInfo-7').toggleClass('--acitve')
+    })
+    $('#tactic-8').on('click', function () {
+        $('#tacticInfo-8').toggleClass('--acitve')
+    })
+    $('#tactic-9').on('click', function () {
+        $('#tacticInfo-9').toggleClass('--acitve')
+    })
+    $('#tactic-10').on('click', function () {
+        $('#tacticInfo-10').toggleClass('--acitve')
+    })
+    $('#tactic-11').on('click', function () {
+        $('#tacticInfo-11').toggleClass('--acitve')
+    })
+    /*<-- база знаний */
 });
