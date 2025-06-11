@@ -515,23 +515,17 @@
     }
 }
 
-@media(max-height: 771px) {
-    .waters__table-body {
-        max-height: 320px;
-    }
-}
-
 @media(max-height: 751px) {
     .waters__table-body {
-        max-height: 360px;
+        max-height: 300px;
     }
 }
 
-@media(max-height: 701px) {
+/* @media(max-height: 701px) {
     .waters__table-body {
         max-height: 310px;
     }
-}
+} */
 
 @media(max-height: 571px) {
     .leftside__menu-nav {
