@@ -76,6 +76,19 @@ button {
 	}
 }
 
+.alert {
+	text-transform: uppercase;
+	background-color: #b22222;
+	border: 2px solid #b22222;
+	transition: ease .3s;
+}
+
+.alert:hover {
+	color: #b22222;
+	background-color: transparent;
+	transition: ease .3s;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;

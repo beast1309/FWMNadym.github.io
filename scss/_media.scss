@@ -57,13 +57,13 @@
     }
 
     .waters__map-map,
-    .ymaps-2-1-79-map {
-        width: 420px !important;
-        height: 240px !important;
+    .ymaps-2-1-79-map,
+    .ymaps-2-1-79-map.ymaps-2-1-79-i-ua_js_yes.ymaps-2-1-79-map-bg.ymaps-2-1-79-islets_map-lang-ru {
+        width: 100% !important;
+        height: 100% !important;
     }
 
     .waters__map-inner {
-        flex-direction: row;
         justify-content: space-between;
     }
 
@@ -95,6 +95,17 @@
         height: 2px;
         transform: translateX(186%);
     }
+
+    .waters__table-header,
+    .waters__table-body__row {
+        grid-template-columns: 55px 140px 220px 1fr !important;
+    }
+
+    .waters__table-header__type::after {
+        top: 0;
+        right: 15px !important;
+        bottom: 20px !important;
+    }
 }
 
 @media (max-width: 741px) {
@@ -123,25 +134,51 @@
         width: 94px;
     }
 
-    .waters__map-map,
-    .ymaps-2-1-79-map {
-        width: 360px !important;
-        height: 200px !important;
+    .waters__table-table,
+    .footer {
+        font-size: 12px;
     }
 
     .waters__table-header,
+    .waters__table-body__row {
+        grid-template-columns: 36px 120px 160px 1fr !important;
+    }
+
+    .waters__table-body {
+        max-height: 310px;
+    }
+
+    .waters__table-header__item.search {
+        flex-direction: row-reverse;
+        gap: 5px;
+    }
+
+    .waters__table-header__search {
+        min-height: 30px !important;
+    }
+
+    .waters__table-header__item.search::after {
+        display: none;
+    }
+
     .calc__table-header,
-    .waters__table-body__row,
     .calc__table-body__row {
         grid-template-columns: 32px 130px 240px 1fr;
     }
 
+    .vigets__inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .vigets__time,
     .vigets__weather {
+
         h2 {
             font-size: 16px;
         }
 
+        align-items: center;
         padding: 4px;
         border: 3px solid #fff;
         background-color: rgba(#0293D4, .8);
@@ -171,6 +208,47 @@
     .timesheet__table-body {
         max-height: 120px;
     }
+
+    .waters__table-header__text.search.--active {
+        left: 100px;
+        right: -170px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 601px) {
+
+    .waters__table-header,
+    .waters__table-body__row {
+        grid-template-columns: 26px 100px 120px 1fr !important;
+        gap: 3px !important;
+        font-size: 10px;
+    }
+
+    .waters__table-header__text.search.--active {
+        left: 70px !important;
+        right: -100px !important;
+        bottom: 0 !important;
+        font-size: 10px !important;
+    }
+
+    .waters__table-header__type::after {
+        display: none !important;
+    }
+}
+
+@media (max-width: 501px) {
+
+    .waters__table-header,
+    .waters__table-body__row {
+        font-size: 8px;
+        grid-template-columns: 20px 70px 80px 1fr !important;
+    }
+
+    .waters__table-header__item,
+    .waters__table-body__cell {
+        border: 1px solid #fff;
+    }
 }
 
 @media (max-width: 431px) {
@@ -182,7 +260,6 @@
     }
 
     .leftside__menu-nav {
-        gap: 120px;
 
         &__link {
             font-size: 24px !important;
@@ -195,18 +272,18 @@
         justify-content: start;
     }
 
-    .waters__map-map,
+    /*  .waters__map-map,
     .ymaps-2-1-79-map {
         width: 360px !important;
         height: 540px !important;
-    }
+    } */
 
     .header__nav {
         gap: 20px;
     }
 
     .header .header__nav.--map::after {
-        width: 50px;
+        width: 51px;
     }
 
     .header .header__nav.--table::after {
@@ -324,6 +401,15 @@
 
 @media (max-width: 391px) {
 
+    .container {
+        padding: 0 20px;
+    }
+
+    .waters__table-header,
+    .waters__table-body__row {
+        font-size: 8px;
+    }
+
     h2,
     p,
     a {
@@ -339,11 +425,16 @@
         font-size: 20px !important;
     }
 
-    .waters__map-map,
+    .header .header__nav.--table::after {
+        width: 61px;
+        transform: translateX(95%);
+    }
+
+    /*  .waters__map-map,
     .ymaps-2-1-79-map {
         width: 300px !important;
         height: 480px !important;
-    }
+    } */
 
     .calc__calc-table .time__on {
         display: flex;
@@ -386,10 +477,10 @@
         max-height: 290px;
     }
 
-    .waters__map-map,
+    /*  .waters__map-map,
     .ymaps-2-1-79-map {
         height: 340px !important;
-    }
+    } */
 
     .header .header__nav.--map::after {
         width: 38px;
@@ -407,13 +498,63 @@
 
 @media (max-width: 361px) {
 
-    .waters__map-map,
+    /*  .waters__map-map,
     .ymaps-2-1-79-map {
         width: 240px !important;
         height: 280px !important;
-    }
+    } */
 
     .leftside__menu-nav {
         gap: 80px;
+    }
+}
+
+@media(max-height: 901px) {
+    .waters__table-body {
+        max-height: 440px;
+    }
+}
+
+@media(max-height: 771px) {
+    .waters__table-body {
+        max-height: 320px;
+    }
+}
+
+@media(max-height: 751px) {
+    .waters__table-body {
+        max-height: 360px;
+    }
+}
+
+@media(max-height: 701px) {
+    .waters__table-body {
+        max-height: 310px;
+    }
+}
+
+@media(max-height: 571px) {
+    .leftside__menu-nav {
+        gap: 20px;
+    }
+
+    .waters__table-body {
+        max-height: 210px;
+    }
+}
+
+@media(max-height: 436px) {
+    .waters__table-body {
+        max-height: 80px;
+    }
+
+    .leftside__menu-nav {
+        gap: 10px;
+    }
+}
+
+@media(max-height: 361px) {
+    .waters__table-body {
+        max-height: 65px;
     }
 }

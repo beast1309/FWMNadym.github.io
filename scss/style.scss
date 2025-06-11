@@ -89,12 +89,13 @@
     top: 0;
     left: 0;
     display: flex;
-    background-color: rgba(#0293D4, .9);
     flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(#0293D4, .9);
     padding: 30px 30px 50px 55px;
     width: 360px;
     height: 100vh;
-    gap: 120px;
+    gap: 20px;
     transform: translateX(0);
     transition: ease .4s;
     z-index: 10;
@@ -130,6 +131,7 @@
 .waters,
 .calc {
     height: 100%;
+    padding-bottom: 20px;
 
     .container {
         height: 100%;
@@ -282,9 +284,32 @@
             }
         }
 
+        &__img.search {
+            max-width: 20px;
+        }
+
+        &__text.search {
+            display: none;
+        }
+
+        &__text.search.--active {
+            display: flex;
+            position: absolute;
+            border: 3px solid #fff;
+            background-color: rgba(#0293D4, .8);
+            font-size: 16px;
+            text-transform: lowercase;
+            left: 10px;
+            right: 10px;
+            bottom: 50px;
+        }
+
         &__item.search {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: relative;
-            padding: 0 38px;
+            padding: 0 16px;
 
             .waters__table-header__search {
                 color: inherit;
@@ -295,6 +320,7 @@
                 outline: none;
                 border: none;
                 width: 100%;
+                min-height: 60px;
             }
 
             .waters__table-header__search::placeholder {
@@ -305,8 +331,8 @@
         &__item.search::after {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 12px;
+            height: 12px;
             background-image: url('../images/table/search-icon.svg');
             background-position: center;
             background-repeat: no-repeat;
@@ -322,8 +348,15 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        max-height: 340px;
+        overflow-y: scroll;
+        scrollbar-color: #0293D4 transparent;
 
         &__row {
+            display: none;
+        }
+
+        &__row.--active {
             display: grid;
             grid-template-columns: 55px 209px 310px 1fr;
             align-items: center;
